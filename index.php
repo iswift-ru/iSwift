@@ -1,3 +1,0 @@
-iswift.ru
-
-Hello World!
