@@ -12,24 +12,24 @@ Cloud Firestore также обладает более богатыми, быс�
 
 Так как мы все знаем, что cloud firestore является базой данных нового поколения, как это возможно, что realtime database бывает лучше, чем cloud firestore. Вот почему я здесь.
 
+Давайте рассмотрим несколько ситуаций, когда realtime database более разумно использовать чем Firestore —
 
-Let’s see some situations where realtime database becomes more resonable to use than firestore —
+1. Первая ситуация - это ситуация, когда ваше приложение похоже на приложение рисования в реальном времени или что-то такое, в котором несколько пользователей обновляют базу данных и считывают данные из базы данных одновременно каждую долю секунд. В Firestore это может стоить Вам тонну денег, потому что Firestore берёт оплату за превышение лимита количества запросов на чтение и запись.
 
-1. The first situation is when your app is like a realtime painting app or something, in which multiple users are updating the database and reading from the database simultaneously within every fraction of seconds. In firestore it can cost you a ton of money because firestore bill is directly propotional to the number of reads and writes.
+2. Во-вторых, realtime database - это зрелый продукт, и вы можете ожидать его стабильной работы т.к. это испытанный и провереныый продукт.
 
-2. The second one is that realtime database is a mature product and you can expect the stability, and it’s a tried-and-true product.
+3. В третьем случае можно использовать обе базы данных вместе в одном приложении или проекте Firebase, чтобы уменьшить счет.
 
-3. The third case, it is possible to use both of the databases together within the same Firebase app or project to reduce your firebase bill.
+4. Первый и третий случаи применяются, если вас беспокоит ваш счет за Firebase, потому что realtime database взимает плату только за пропускную способность и хранение, а не за каждое чтение и запись.
 
-4. The first and third case is applied if you’re concerned about your firebase bill that’s because realtime database charges only for bandwidth and storage and not on each read and write.
 
-I think you got the point now
+Думаю, сейчас вы поняли
 
 ![Cloud firestore](https://iswift.ru/images/2020-02-21_15-54-07.png)  
-<p align="center">Yeah got it now go ahead and tell what you want to say!!</p>
+<p align="center">Да, теперь давай и скажи, что ты хочешь сказать!</p>
 
-*<strong>Let’s see how can we use realtime database in the simplest way possible because it’s in flutter(which makes everything simple).</strong>*
-### Create
+*<strong>Давайте посмотрим, как мы можем использовать realtime database. Во Flutter всё делается достаточно просто.</strong>*
+### Создание
 
 ```
 //you can use "push" if you want an automated id, I'm giving my document id here.
@@ -40,7 +40,7 @@ FirebaseDatabase.instance.reference().child('recent').child('id')
 });
 ```
 
-### Read
+### Чтение
 
 ```
 //database referene.
@@ -89,7 +89,7 @@ return   Center(child: CircularProgressIndicator());
 ),
 ```
 
-### Update
+### Обновление
 
 ```
 FirebaseDatabase.reference()
@@ -100,21 +100,23 @@ FirebaseDatabase.reference()
 });
 ```
 
-### Delete
+### Удаление
 
 ```
 //remove() is equivalent to calling set(null)
 recentJobRef.child('id').remove();
 ```
 
-**That’s it, if you have some suggestion or criticism, I’m eagerly waiting for it.**
+**Вот и всё, если у вас есть какие-то предложения или критика, я с нетерпением жду их.**
 
-I know after reading this article you’re going to watch *How to train your dragon.*
+
+Я знаю, что после прочтения этой статьи вы будете изучать *Как натренировать своего дракона.*
 
 ![Cloud firestore](https://iswift.ru/images/2020-02-21_16-14-31.png)
-<p align="center"> I know you… </p>
+<p align="center"> Я знаю Вас… </p>
 
-But wait for a second, and appreciate or criticize this article.
-Go ahead toothless dragon is waiting for you.
+Но подождите секунду и оцените или покритикуйте эту статью.
 
-WRITTEN BY Md Sadab Wasim
+А теперь идите вперёд беззубый дракон уже ждёт вас
+
+Автор Md Sadab Wasim
