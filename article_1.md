@@ -25,7 +25,7 @@ I think you got the point now
 <p align="center">Yeah got it now go ahead and tell what you want to say!!</p>
 
 *<strong>Let’s see how can we use realtime database in the simplest way possible because it’s in flutter(which makes everything simple).</strong>*
-###Create
+### Create
 
 ```
 //you can use "push" if you want an automated id, I'm giving my document id here.
@@ -35,3 +35,73 @@ FirebaseDatabase.instance.reference().child('recent').child('id')
 'created_at': time
 });
 ```
+
+### Read
+
+```
+//database referene.
+var recentJobsRef =  recentJobsRef = FirebaseDatabase.instance
+.reference()
+.child('recent')
+.orderByChild('created_at')  //order by creation time.
+.limitToFirst(10);           //limited to get only 10 documents.
+//Now you can use stream builder to get the data.
+StreamBuilder(
+stream: recentJobsRef.onValue,
+builder: (context, snap) {
+if (snap.hasData && !snap.hasError && snap.data.snapshot.value!=null) {
+ 
+//taking the data snapshot.
+DataSnapshot snapshot = snap.data.snapshot;
+List item=[];
+List _list=[];
+//it gives all the documents in this list.
+_list=snapshot.value; 
+//Now we're just checking if document is not null then add it to another list called "item".
+//I faced this problem it works fine without null check until you remove a document and then your stream reads data including the removed one with a null value(if you have some better approach let me know).
+_list.forEach((f){
+if(f!=null){
+item.add(f);
+     }
+    }
+  );
+return snap.data.snapshot.value == null
+//return sizedbox if there's nothing in database.
+? SizedBox()
+//otherwise return a list of widgets.
+: ListView.builder(
+scrollDirection: Axis.horizontal,
+itemCount: item.length,
+itemBuilder: (context, index) {
+return _containerForRecentJobs(
+item[index]['title']
+);
+},
+);
+} else {
+return   Center(child: CircularProgressIndicator());
+}
+},
+),
+```
+
+### Update
+
+```
+FirebaseDatabase.reference()
+.child('recent')
+.child('id')
+.update({
+'title':'sadab is amazing'   //yes I know.
+});
+```
+
+### Delete
+
+```
+//remove() is equivalent to calling set(null)
+recentJobRef.child('id').remove();
+```
+
+**That’s it, if you have some suggestion or criticism, I’m eagerly waiting for it.**
+I know after reading this article you’re going to watch *How to train your dragon.*
