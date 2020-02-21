@@ -1,13 +1,17 @@
 <h1 align="center">Запись, чтение, обновление и удаление информации в Realtime database во Flutter</h1>
 <h2 align="center">Cloud firestore < Realtime database</h2>
 ![Cloud firestore](https://iswift.ru/images/1_Ld2cOA4_fiEhejTmQixYkQ.jpeg)
-<p align="center">Realtime db vs cloud firestore</p>
-I know your reaction would be like this
+<p align="center">Realtime db и cloud firestore</p>
+
+ Я знаю какая будет у вас реакция на это
 ![Cloud firestore](https://iswift.ru/images/reaciya.png)  
 
-> Cloud Firestore is Firebase’s new flagship database for mobile app development. It improves on the successes of the Realtime Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales better than the Realtime Database.
+> Cloud Firestore это новый флагман среди баз данных для разработки мобильных приложений от компании Firebase. 
+Благодаря новой, более интуитивно понятной модели данных Realtime Database становится более удобной.
+Cloud Firestore также обладает более богатыми, быстрыми запросами и масштабируется лучше, чем Realtime Database.
 
-As we all know cloud firestore is firebase next-generation database how is it possible that the realtime database becomes better that cloud firestore. That’s why I’m here.
+Так как мы все знаем, что cloud firestore является базой данных нового поколения, как это возможно, что realtime database бывает лучше, чем cloud firestore. Вот почему я здесь.
+
 
 Let’s see some situations where realtime database becomes more resonable to use than firestore —
 
