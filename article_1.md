@@ -25,3 +25,13 @@ I think you got the point now
 <p align="center">Yeah got it now go ahead and tell what you want to say!!</p>
 
 *<strong>Let’s see how can we use realtime database in the simplest way possible because it’s in flutter(which makes everything simple).</strong>*
+###Create
+
+```
+//you can use "push" if you want an automated id, I'm giving my document id here.
+FirebaseDatabase.instance.reference().child('recent').child('id')
+.set({
+'title': 'Realtime db rocks',
+'created_at': time
+});
+```
