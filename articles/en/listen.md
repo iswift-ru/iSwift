@@ -1,1 +1,1 @@
-# [Realtime database in flutter](articles/en/realtime-database-in-flutter.html)
+# [Realtime database in flutter](articles/en/realtime-database-in-flutter)
