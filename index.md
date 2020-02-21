@@ -13,6 +13,7 @@
 ### Разработка приложений
 
 * Swift
+* Flutter (под Android и IOS)
 
 
 ### Настройка виртуальных серверов и хостингов
@@ -31,6 +32,11 @@
 * Reg.ru
 
 ### Контакты
+
+* Эл. почта: cto@iSwift.ru
+* www: iSwift.ru
+
+### Статьи
 
 * Эл. почта: cto@iSwift.ru
 * www: iSwift.ru
