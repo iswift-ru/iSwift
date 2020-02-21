@@ -20,5 +20,6 @@ Let’s see some situations where realtime database becomes more resonable to us
 4. The first and third case is applied if you’re concerned about your firebase bill that’s because realtime database charges only for bandwidth and storage and not on each read and write.
 
 I think you got the point now
+
 ![Cloud firestore](https://iswift.ru/images/2020-02-21_15-54-07.png)  
 <p align="center">Yeah got it now go ahead and tell what you want to say!!</p>
