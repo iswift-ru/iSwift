@@ -104,6 +104,7 @@ recentJobRef.child('id').remove();
 ```
 
 **That’s it, if you have some suggestion or criticism, I’m eagerly waiting for it.**
+
 I know after reading this article you’re going to watch *How to train your dragon.*
 
 ![Cloud firestore](https://iswift.ru/images/2020-02-21_16-14-31.png)
