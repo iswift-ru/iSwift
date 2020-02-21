@@ -38,6 +38,6 @@
 
 ### Статьи
 
-* [Lessons Flutter](articles/en/listen)
-* [Уроки Flutter на русском языке](articles/ru/listru)
+* [Lessons Flutter](articles/en/listen.md)
+* [Уроки Flutter на русском языке](articles/ru/listru.md)
 
