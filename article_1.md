@@ -24,4 +24,4 @@ I think you got the point now
 ![Cloud firestore](https://iswift.ru/images/2020-02-21_15-54-07.png)  
 <p align="center">Yeah got it now go ahead and tell what you want to say!!</p>
 
-*<strong>Let’s see how can we use realtime database in the simplest way possible because it’s in flutter(which makes everything simple).</strong>(italic)*
+*<strong>Let’s see how can we use realtime database in the simplest way possible because it’s in flutter(which makes everything simple).</strong>*
