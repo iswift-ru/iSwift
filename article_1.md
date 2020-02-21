@@ -4,3 +4,5 @@
 <p align="center">Realtime db vs cloud firestore</p>
 I know your reaction would be like this
 ![Cloud firestore](https://iswift.ru/images/reaciya.png)  
+
+> Cloud Firestore is Firebase’s new flagship database for mobile app development. It improves on the successes of the Realtime Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales better than the Realtime Database.
