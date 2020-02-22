@@ -1,3 +1,4 @@
+<meta name="yandex-verification" content="87d952d477e63ff4" />
 ### Разработка програмного обеспечения
 
 * HTML, CSS
