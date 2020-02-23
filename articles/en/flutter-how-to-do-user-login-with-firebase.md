@@ -119,3 +119,43 @@ Next we build secondary button to toggle between login and signup. We use ```Fla
 
 For switching between login and signup, it is just doing set state with toggled bool ```_isLoginMode```. Also we have a ```resetForm ```method to clear the inputs of the *TextFormField (this is kept in GlobalKey of FormState which will be explained later below).*
 
+<script src="https://gist.github.com/tattwei46/d39a7135b80a50913bd70ab48dc9b3d1.js"></script>
+
+Next, we are build UI to display error messages to user. These messages could be error thrown by Firebase or invalid form input. If there is a new error message, we will ```setstate``` with new values of ```_errorMessage```
+
+<script src="https://gist.github.com/tattwei46/5747f69581a87278c22f7c556de59174.js"></script>
+
+Finally, back to our form, we need to create a GlobalKey to keep our form state. This keeps track of the user typed email and password.
+Add the following in class ```_LoginSignupPageState```
+
+```final _formKey = new GlobalKey<FormState>();```
+
+And linked it under _showForm(), key properties
+
+```Widget _showForm() {
+  return new Container(
+      padding: EdgeInsets.all(16.0),
+      child: new Form(
+        key: _formKey,
+        child: new ListView(
+          shrinkWrap: true,
+          children: <Widget>[
+            showLogo(),
+            showEmailInput(),
+            showPasswordInput(),
+            showPrimaryButton(),
+            showSecondaryButton(),
+            showErrorMessage(),
+          ],
+        ),
+      ));
+}```
+
+Let’s arrange those individual UI components and put it back to our *ListView*.
+
+<script src="https://gist.github.com/tattwei46/399aaee36ae6d91d705d19a30d7aa192.js"></script>
+
+Let’s try to run our project using ```flutter run``` command
+
+![Flutter login demo](https://iswift.ru/images/1_dgisA_6Dmtsdhz_GbmFrBg.png "Flutter login demo")
+<p textaligen="center">TextFormField validator in action</p>
