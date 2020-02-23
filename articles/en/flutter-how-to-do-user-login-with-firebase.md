@@ -33,9 +33,9 @@ Firebase is a mobile and web development platform that provides developer with w
 ## What are the tools version?
 
 Here are the versions of the tools used for this article and on Github
-Flutter Version: flutter_macos_v1.9.1+hotfix.4-stable
-Android Studio Version: 3.5
-Xcode Version: 11.1
+* Flutter Version: flutter_macos_v1.9.1+hotfix.4-stable
+* Android Studio Version: 3.5
+* Xcode Version: 11.1
 
 ## How to setup environment?
 
