@@ -64,3 +64,5 @@ If you have both Android emulator and iOS Simulator running, run the following c
 ```flutter run -d all```
 
 You should see similar screens on both Android Emulator and iOS Simulator.
+![Android](https://iswift.ru/images/1_s5aA2j3HJAONXq1RrBLpGA.png "Android")
+![IOS](https://iswift.ru/images/1_VdFSnH_gOFIG2QGBY_N9ZA.png "IOS")
