@@ -273,3 +273,11 @@ Similarly if we try to sign in the same user we signed up, we should get somethi
 ```I/flutter (14294): Signed in JSwpKsCFxPZHEqeuIO4axCsmWuP2```
 
 ![Debug banner removed](https://iswift.ru/images/1_hfrGL0FlyfbmVCrZPBKFmw.png "Debug banner removed")
+<p align="center">Debug banner removed</p>
+
+**ProTip:** Notice the debug ribbon at the top right corner of the app, you can easily remove it by adding the following line inside MaterialApp widget in main.dart
+```debugShowCheckedModeBanner: false,```
+
+🎊🎉Success🎉🎊
+
+![Success](https://iswift.ru/images/1_lEkb1HvKFvsCmSseNFZLhA.gif "Success")
