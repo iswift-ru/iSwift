@@ -2,10 +2,10 @@
 ![Flutter login with firebase](https://iswift.ru/images/1_9nmjA-EfVfu86LeGAsHlJQ.png "Flutter login with firebase")
 
 ## Release
-25/12/18 — Updated latest code snippet after refactoring and clean up.
-24/01/19 — Duplicated link to github at the top of article.
-23/07/19 — Added trim method to email and password value
-13/10/19 — Updated code and article after cleanup and packages update
+25/12/18 — Обновление последней версии кода после рефакторинга и чистки.
+24/01/19 — Дублирование ссылки на GitHub в верхней части статьи.
+23/07/19 — Добавление trim метода в email и password.
+13/10/19 — Обновление кода и статьи после чистки и обнолвниея пакетов.
 
 ## Source Code
 
