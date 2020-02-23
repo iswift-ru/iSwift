@@ -158,4 +158,4 @@ Let’s arrange those individual UI components and put it back to our *ListView*
 Let’s try to run our project using ```flutter run``` command
 
 ![Flutter login demo](https://iswift.ru/images/1_dgisA_6Dmtsdhz_GbmFrBg.png "Flutter login demo")
-<p textaligen="center">TextFormField validator in action</p>
+<p text-align="center">TextFormField validator in action</p>
