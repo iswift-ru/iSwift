@@ -53,3 +53,14 @@ Here are the versions of the tools used for this article and on Github
 ## Building Flutter App
 
 You can get the complete source code in the GitHub link at the bottom of the post. The following shows how do we derive from Flutter sample project to complete source code in GitHub.
+
+**👉Step 1: Create a new Flutter project call flutter login demo**
+Launch simulator and run project using Flutter.
+
+*flutter run*
+
+If you have both Android emulator and iOS Simulator running, run the following command to execute on both.
+
+*flutter run -d all*
+
+You should see similar screens on both Android Emulator and iOS Simulator.
