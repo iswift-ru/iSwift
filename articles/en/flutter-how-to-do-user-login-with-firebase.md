@@ -54,7 +54,7 @@ Here are the versions of the tools used for this article and on Github
 
 You can get the complete source code in the GitHub link at the bottom of the post. The following shows how do we derive from Flutter sample project to complete source code in GitHub.
 
-**👉Step 1: Create a new Flutter project call flutter login demo**
+###👉Step 1: Create a new Flutter project call flutter login demo
 Launch simulator and run project using Flutter.
 
 ```flutter run```
@@ -72,7 +72,22 @@ You should see similar screens on both Android Emulator and iOS Simulator.
 >For iOS: [Option 1] Hold and press command + shift + 4. Press the space bar to change Mouse pointer to camera icon. Point to iOS >simulator, click to take screenshot. The image will be saved to desktop.
 >For iOS: [Option 2] Select Simulator and press command + S. Thanks JerryZhou for sharing this information.
 
-**👉Step 2: Replace original code with Hello World**
+###👉Step 2: Replace original code with Hello World**
 At main.dart, erase all contents and add the following boilerplate to your file. We are going to create a new file called login_signup_page.dart which has LoginSignupPage class. On your terminal, hit the R key to perform hot reload and you should see “Hello World” on the screen.
 
 <script src="https://gist.github.com/tattwei46/4f5a72c294781b89f835f969acc20267.js"></script>
+<script src="https://gist.github.com/tattwei46/43ad1fbda618e436a2ecb115786c00bc.js"></script>
+
+![Hello world](https://iswift.ru/images/1_gG7KSUYl1Elmn9OyjPP-Vg.png "Hello world")
+
+**👉Step 3: Changing from stateless to stateful**
+<script src="https://gist.github.com/tattwei46/33cf7585688ad6d964b49a89da47a514.js"></script>
+
+**👉Step 4: Replace Hello World with Stack**
+Inside the Scaffold body, let’s replace the Hello Word text widget to a stack widget. The stack widget allows us to overlay one widget above the other. The idea is to show circular progress bar when any login or sign up activity is running. In the stack, we will have the Form and the circular progress bar. Inside the Form, we will add a ListView that allows us to put an array of widgets. With that, we are able to refactor out several UI Components and put them inside the ListView.
+***Pro Tip*** : *Whenever we are using text input, it is better to wrap it around a ListView to prevent rendering error when the soft keyboard shows up due to overflow pixels.*
+
+<script src="https://gist.github.com/tattwei46/bac22f40a192fa6677263d2a6a29363d.js"></script>
+
+**👉Step 5: Building each UI components**
+We start with building our circular progress bar. Thanks to Flutter, this is available as built-in widget call CircularProgressIndicator . We will use bool _isLoading to determine whether to show the CircularProgressIndicator or not.
