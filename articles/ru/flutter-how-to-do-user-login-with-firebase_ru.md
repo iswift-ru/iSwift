@@ -1,7 +1,7 @@
 # Flutter : Как сделать авторизацию с помощью Firebase
 ![Flutter login with firebase](https://iswift.ru/images/1_9nmjA-EfVfu86LeGAsHlJQ.png "Flutter login with firebase")
 
-## Release
+## Выпуск
 25/12/18 — Обновление последней версии кода после рефакторинга и чистки.
 
 24/01/19 — Дублирование ссылки на GitHub в верхней части статьи.
@@ -10,16 +10,17 @@
 
 13/10/19 — Обновление кода и статьи после чистки и обнолвниея пакетов.
 
-## Source Code
+## Исходный код
 
-In case you want to skip the whole mumbo jumbo, you can grab the source code here 👇
+В случае, если вы хотите просмотреть целиком всю эту абрукадабру вы можете взять исходный код здесь 👇
+
 https://github.com/tattwei46/flutter_login_demo
-A sample Flutter project to show case user login and signup process with Firebase authentication. It also shows how to…
-github.com
 
-## What is Flutter?
+Пример проекта Flutter - вход для пользователя в систему и процесса регистрации с аутентификацией Firebase
 
-Flutter is an open source mobile SDK developed by Google to build high quality applications for Android and iOS. It allows developers to not only build application with beautiful design, smooth animation and fast performance, but also able to integrate new features quickly. Flutter offers high velocity development with its stateful hot reload and hot restart. With only one code base to manage, you get to save a lot of cost comparing to managing both Android and iOS projects as Flutter compiles it to native ARM code. Flutter uses Dart programming language which is also developed by Google.
+## Что такой Flutter?
+
+Flutter - это мобильный SDK (Пакет программ для разработки програмного обеспечения) с открытым исходным кодом, разработанный компанией Google для построения высококачественных приложений для Android и iOS. Он позволяет разработчикам не только создавать приложения с красивым дизайном, плавной анимацией и быстрым выполнением, но и так же возможность быстрой интеграции новых функций. Флаттер предлагает быструю разработку с его горячим перезапуском приложения. Имея только одну кодовую базу для управления, вы можете сэкономить много времени по сравнению с отдельной разработкой Android и iOS проектов, поскольку Flutter компилирует его с собственным ARM кодом. Флаттер использует язык программирования Дарт, который также разработал Гугл.
 
 ## Why Dart?
 
