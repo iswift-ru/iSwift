@@ -71,3 +71,8 @@ You should see similar screens on both Android Emulator and iOS Simulator.
 >For Android: Simply click the camera icon on the left side of the tool pane. The image will be saved to desktop
 >For iOS: [Option 1] Hold and press command + shift + 4. Press the space bar to change Mouse pointer to camera icon. Point to iOS >simulator, click to take screenshot. The image will be saved to desktop.
 >For iOS: [Option 2] Select Simulator and press command + S. Thanks JerryZhou for sharing this information.
+
+**👉Step 2: Replace original code with Hello World**
+At main.dart, erase all contents and add the following boilerplate to your file. We are going to create a new file called login_signup_page.dart which has LoginSignupPage class. On your terminal, hit the R key to perform hot reload and you should see “Hello World” on the screen.
+
+<script src="https://gist.github.com/tattwei46/4f5a72c294781b89f835f969acc20267.js"></script>
