@@ -64,5 +64,10 @@ If you have both Android emulator and iOS Simulator running, run the following c
 ```flutter run -d all```
 
 You should see similar screens on both Android Emulator and iOS Simulator.
-![Android](https://iswift.ru/images/1_s5aA2j3HJAONXq1RrBLpGA.png "Android")
-![IOS](https://iswift.ru/images/1_VdFSnH_gOFIG2QGBY_N9ZA.png "IOS")
+![Android](https://iswift.ru/images/1_s5aA2j3HJAONXq1RrBLpGA.png "Android")![IOS](https://iswift.ru/images/1_VdFSnH_gOFIG2QGBY_N9ZA.png "IOS")
+
+
+>If you’re interested to know how to get screenshots at your simulators;
+>For Android: Simply click the camera icon on the left side of the tool pane. The image will be saved to desktop
+>For iOS: [Option 1] Hold and press command + shift + 4. Press the space bar to change Mouse pointer to camera icon. Point to iOS >simulator, click to take screenshot. The image will be saved to desktop.
+>For iOS: [Option 2] Select Simulator and press command + S. Thanks JerryZhou for sharing this information.
