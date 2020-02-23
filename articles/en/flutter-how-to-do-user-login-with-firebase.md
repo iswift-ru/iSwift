@@ -158,4 +158,118 @@ Let’s arrange those individual UI components and put it back to our *ListView*
 Let’s try to run our project using ```flutter run``` command
 
 ![Flutter login demo](https://iswift.ru/images/1_dgisA_6Dmtsdhz_GbmFrBg.png "Flutter login demo")
-<p text-align="center">TextFormField validator in action</p>
+<p align="center">TextFormField validator in action</p>
+
+### 👉Step 6: Register project with Firebase
+Go to https://console.firebase.google.com and register new project.
+For android, click the android icon. Enter your package name which can be found in ```android/app/src/main/AndroidManifest.xml```
+Download the config file which is ```google-services.json``` (Android).
+Drag the ```google-services.json``` into app folder in project view
+
+![google-services.json](https://iswift.ru/images/1_Jom5-2bcarPMsrIEbMK3mw.png "google-services.json")
+
+We need to add the Google Services Gradle plugin to read google-services.json. In the ```/android/app/build.gradle``` add the following to the last line of the file.
+
+```apply plugin: 'com.google.gms.google-services'```
+
+```In android/build.gradle```, inside the buildscript tag, add new dependency.
+```buildscript {
+   repositories {
+      //...
+}
+dependencies {
+   //...
+   classpath 'com.google.gms:google-services:3.2.1'
+}```
+For iOS, open ```ios/Runner.xcworkspace``` to launch Xcode. The package name can be found in bundle identifier at Runner view.
+Download the config file which is ```GoogleService-info.plist``` (iOS).
+Drag the ```GoogleService-info.plist``` into the Runner subfolder inside Runner as shown below.
+
+### 👉Step 7: Add dependencies in pubspec.yaml
+Next we need to add *firebase_auth* and *firebase_database* dependency in pubspec.yaml. To get the latest version number, go to https://pub.dartlang.org/ and search for the dependency.
+
+```firebase_auth: ^0.14.0+5
+firebase_database: ^3.0.7```
+
+### 👉Step 8: Import Firebase Auth
+
+```import 'package:firebase_auth/firebase_auth.dart';```
+
+### 👉Step 9: Enable sign up using email and password at Firebase
+![Sign up](https://iswift.ru/images/1_UCo6SN3eK-Rn30YMSSWaVA.png "sign up")
+### 👉Step 10: Create abstract class BaseAuth
+Create new file call authentication.dart. We are going to create abstract class BaseAuth. The class only contains the signature of the methods and this ensures minimal changes if we decided to change from Firebase to something else.
+<script src="https://gist.github.com/tattwei46/35f58c7faebce33c56bddedb1d99cf93.js"></script>
+
+### 👉Step 11: Create class Auth implementing BaseAuth
+This is where we define what the methods in the abstract class do.
+
+<script src="https://gist.github.com/tattwei46/90e0006da3043a7322f351545879085c.js"></script>
+
+### 👉Step 12: Create HomePage
+Once user logs in successfully, they will be directed into home page.
+
+<script src="https://gist.github.com/tattwei46/9a4892eb2a344ad1e0f556009b4942ca.js"></script>
+
+### 👉Step 13: Create RootPage
+So RootPage which is a stateful page, actually decides whether to show user LoginSignupPage or HomePage based on their authentication status.
+Hence, we keep track of the authentication status using :
+```enum AuthStatus {
+  NOT_DETERMINED,
+  NOT_LOGGED_IN,
+  LOGGED_IN,
+}```
+When the RootPage is loaded, we will try to get the userid and set ```AuthStatus```
+<script src="https://gist.github.com/tattwei46/346239c19e9bd8ec24caa4bc440ccea9.js"></script>
+
+We have 2 callback functions for login and logout. So when user is at LoginSignupPage and successfully logs in, it will trigger the login callback in RootPage, that sets the ```AuthStatus``` to ```LOGGED_IN``` and subsequently show user the HomePage.
+The same happens when user successfully logs out when in HomePage.
+
+<script src="https://gist.github.com/tattwei46/ee5bc1e09a7864a65110ad76c9dd36ad.js"></script>
+
+Here is the part, on showing user the correct page according to their AuthStatus. More explaination on auth in the subsequent steps.
+
+<script src="https://gist.github.com/tattwei46/743be7c679296c04db1b57d22ae53e99.js"></script>
+
+### 👉Step 14: Initialize Auth in main
+In main.dart, when we call new RootPage, we initialize new ```Auth()``` and pass into RootPage as shown.
+
+<script src="https://gist.github.com/tattwei46/df8645225b187220f372f94fff96519d.js"></script>
+
+In root_page.dart, we receive the initialized auth as follows:
+<script src="https://gist.github.com/tattwei46/72c47af73bd30767e227e9a01f944a6e.js"></script>
+
+### 👉Step 15: Link up LoginSignupPage and RootPage
+In the RootPage class, we call LoginSignupPage and pass in auth that was pass in earlier from main.dart and also linked our callback function. We use widget.auth instead of auth is because this variable was pass into rootpage class from MyApp class instead of initialized in rootpage.
+Here is snapshot of code inside RootPage class that calls LoginSignupPage
+
+<script src="https://gist.github.com/tattwei46/14260d7c0f430314758bb6318841523c.js"></script>
+
+Here is snapshot of code inside LoginSignupPage that receives the auth and loginCallback
+<script src="https://gist.github.com/tattwei46/bea89f750c620f6246d72f7c228fff7b.js"></script>
+
+### 👉Step 16: Use Auth inside LoginSignupPage
+
+We use ```widget.auth.signIn``` that was implemented according to abstract class BaseAuth to log user in. The underlying method uses Firebase ```signInWithEmailAndPassword``` which returns a future value. A future is part of asynchronous operation that does not block the main thread. Future class is associated with **async** and **await** keyword. Hence the method needs to have await and the external wrapper function needs to have async. So we enclose the login and signup methods with try catch block. If there was an error, our catch block should be able to capture the error message and display to the user.
+
+<script src="https://gist.github.com/tattwei46/28d2e93b434fcf02553aba3417036fd2.js"></script>
+
+### 👉Step 17: Try to sign up a user
+Let’s try to sign up a user by entering an email and password.
+
+>If you encounter something like below, this is because there is an extra spacing at the end of your email. That is why I have added >trim to email
+
+```I/flutter (14294): Error PlatformException(exception, The email address is badly formatted., null)```
+
+>If you encounter something like below, change your password to be at least 6 characters long.
+
+```I/flutter (14294): Error PlatformException(exception, The given password is invalid. [ Password should be at least 6 characters ], null)```
+Finally once success, you should be able to see in your terminal the following line. The random string is the user ID.
+
+```I/flutter (14294): Signed up JSwpKsCFxPZHEqeuIO4axCsmWuP2```
+
+Similarly if we try to sign in the same user we signed up, we should get something like this:
+
+```I/flutter (14294): Signed in JSwpKsCFxPZHEqeuIO4axCsmWuP2```
+
+![Debug banner removed](https://iswift.ru/images/1_hfrGL0FlyfbmVCrZPBKFmw.png "Debug banner removed")
