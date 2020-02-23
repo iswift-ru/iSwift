@@ -41,9 +41,13 @@ Here are the versions of the tools used for this article and on Github
 
 * Follow through the instructions in https://flutter.dev/docs/get-started/install to get your Flutter SDK. You should be installing either Android Studio or VSCode with Flutter and Dart plugins.
 * Run Flutter doctor to install any dependencies
+
 ```flutter doctor```
+
 * To launch iOS simulator use the following command:
+
 ```open -a Simulator```
+
 * To launch android emulator, do the following: Launch **Android Studio > tools > AVD Manager** and select create **Virtual Device.**
 
 ## Building Flutter App
