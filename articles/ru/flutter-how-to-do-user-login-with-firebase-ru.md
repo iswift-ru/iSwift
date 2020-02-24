@@ -32,11 +32,11 @@ Flutter - это мобильный SDK (Пакет программ для ра
 
 ## Что такое Firebase
 
-Firebase is a mobile and web development platform that provides developer with wide range of products. Today we will be looking on how we can build our first Flutter application with Firebase authentication and realtime database (RTDB). This application allows user to perform account sign up/login and CRUD actions on todo items with Firebase. On this post, we are going to solely focus on the user signup and login part.
+Firebase это платформа для мобильной и web разработки, которая позволяет разработчику делать широкий ассортимент продуктов. Сегодня мы будем изучать как мы сможем сделать наше первое Флаттер приложение спомощью Firebase авторизации и realtime database (RTDB).  Это приложение позволит пользователям регистрироваться или входить в аккаунт и совершать CRUD (создание, чтение, обновление, удаление) действия над записями спомощью Firebase. On this post, we are going to solely focus on the user signup and login part. В этом статье, мы сфокусируемся только на регистрации и авторизации пользователей.
 
-## What are the tools version?
+## Какие версии интсрументов используются?
 
-Here are the versions of the tools used for this article and on Github
+Здесь  перечислены версии инструментов которые изпользуются в статье и в гитхабе.
 * Flutter Version: flutter_macos_v1.9.1+hotfix.4-stable
 * Android Studio Version: 3.5
 * Xcode Version: 11.1
