@@ -41,33 +41,33 @@ Firebase это платформа для мобильной и web разраб
 * Android Studio Version: 3.5
 * Xcode Version: 11.1
 
-## How to setup environment?
+## Как установить окружающую среду?
 
-* Follow through the instructions in https://flutter.dev/docs/get-started/install to get your Flutter SDK. You should be installing either Android Studio or VSCode with Flutter and Dart plugins.
-* Run Flutter doctor to install any dependencies
+* Следуйте инструкция по ссылке https://flutter.dev/docs/get-started/install чтобы установить Flutter SDK. Вам следует установить или Android Studio или VSCode с Flutter и Dart плагинами.
+* Запустите Flutter doctor для установки зависимостей
 
 ```flutter doctor```
 
-* To launch iOS simulator use the following command:
+* Для использования IOS эмулятора сделайте команду:
 
 ```open -a Simulator```
 
-* To launch android emulator, do the following: Launch **Android Studio > tools > AVD Manager** and select create **Virtual Device.**
+* для использования android эмулятора, выполните следующие действия: Следуйте **Android Studio > tools > AVD Manager** и выбирите создание **Virtual Device.**
 
-## Building Flutter App
+## Создание Flutter приложения
 
-You can get the complete source code in the GitHub link at the bottom of the post. The following shows how do we derive from Flutter sample project to complete source code in GitHub.
+You can get the complete source code in the GitHub link at the bottom of the post. Вы можете использовать готовый исходный код на ГитХабе по ссылке в верхней части статьи. Ниже показано как мы написали исходный код для флаттер приложения опубликованный на ГитХабе.
 
-### 👉Step 1: Create a new Flutter project call flutter login demo
-Launch simulator and run project using Flutter.
+### 👉Шаг 1: Создание нового Flutter проекта под названием "Flutter login demo"
+Запускаем эмулятор и запускаем проект с помощью Флаттер.
 
 ```flutter run```
 
-If you have both Android emulator and iOS Simulator running, run the following command to execute on both.
+Для запуска Android и iOS эмулятора выполните следующую команду.
 
 ```flutter run -d all```
 
-You should see similar screens on both Android Emulator and iOS Simulator.
+Вы должны увидеть симулятор экранов Андройд и ИОС.
 ![Android](https://iswift.ru/images/1_s5aA2j3HJAONXq1RrBLpGA.png "Android")![IOS](https://iswift.ru/images/1_VdFSnH_gOFIG2QGBY_N9ZA.png "IOS")
 
 
