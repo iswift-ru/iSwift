@@ -22,15 +22,15 @@ https://github.com/tattwei46/flutter_login_demo
 
 Flutter - это мобильный SDK (Пакет программ для разработки програмного обеспечения) с открытым исходным кодом, разработанный компанией Google для построения высококачественных приложений для Android и iOS. Он позволяет разработчикам не только создавать приложения с красивым дизайном, плавной анимацией и быстрым выполнением, но и так же возможность быстрой интеграции новых функций. Флаттер предлагает быструю разработку с его горячим перезапуском приложения. Имея только одну кодовую базу для управления, вы можете сэкономить много времени по сравнению с отдельной разработкой Android и iOS проектов, поскольку Flutter компилирует его с собственным ARM кодом. Флаттер использует язык программирования Дарт, который также разработал Гугл.
 
-## Why Dart?
+## Почему Dart?
 
-* A terse, strongly-typed, object-oriented language.
-* Supports just-in-time (JIT) and ahead-of-time (AOT) compilation.
-* JIT allows Flutter to recompile code directly on the device while the app is still running.
-* Enable fast development and enables sub-second stable hot reloading.
-* AOT allows code to be compiled directly into native ARM code leading to fast startup and predictable performance.
+* Если коротко то это строго типизированный, объектно ориентированный язык.
+* Поддерживает just-in-time (JIT) и ahead-of-time (AOT) компиляцию.
+* JIT позволяет Flutter перекомпилировать код непосредственно на устройстве, пока приложение еще работает.
+* Обеспечивает быструю разработку и стабильную "горячую перезагрузку" в течение секунды. 
+* AOT позволяет компилировать код непосредственно в собственный ARM-код, что обеспечивает быстрый запуск и предсказуемую производительность.
 
-## What is Firebase
+## Что такое Firebase
 
 Firebase is a mobile and web development platform that provides developer with wide range of products. Today we will be looking on how we can build our first Flutter application with Firebase authentication and realtime database (RTDB). This application allows user to perform account sign up/login and CRUD actions on todo items with Firebase. On this post, we are going to solely focus on the user signup and login part.
 
