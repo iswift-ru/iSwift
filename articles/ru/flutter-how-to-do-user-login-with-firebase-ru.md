@@ -72,27 +72,27 @@ You can get the complete source code in the GitHub link at the bottom of the pos
 
 
 >Если вам интересно знать как сделать скриншоты в ваших симуляторах;
-
+>
 >Для Android: Просто нажмите на иконку "камера" на левой стороне панели инструментов. Картинка будет сохранена на рабочем столе.
-
+>
 >Для iOS: [Вариант 1] Нажмите вместе кнопки command + shift + 4. Нажмите клавишу пробела, чтобы изменить указатель мыши на значок камеры.
-
+>
 >Наведите курсор на симулятор iOS, щелкните, чтобы сделать снимок экрана. Картинка будет сохранена на рабочий стол.
-
+>
 >Для iOS: [Вариант 2] Выбирите симулятор и нажмите command + S. Спасибо JerryZhou за то, что поделился этой информацией.
 
-### 👉Step 2: Replace original code with Hello World
-At main.dart, erase all contents and add the following boilerplate to your file. We are going to create a new file called login_signup_page.dart which has LoginSignupPage class. On your terminal, hit the R key to perform hot reload and you should see “Hello World” on the screen.
+### 👉Шаг 2: Замена оригинального кода на Привет Мир (Hello World)
+At main.dart, erase all contents and add the following boilerplate to your file.В файле main.dart удалите все содержимое и добавьте в файл следующующий шаблон. Вы должны создать новый файл под названием login_signup_page.dart в котором будет LoginSignupPage класс. В терминале нажмите клавишу R, чтобы выполнить горячую перезагрузку, и вы должны увидеть "Hello World" на экране.
 
 <script src="https://gist.github.com/tattwei46/4f5a72c294781b89f835f969acc20267.js"></script>
 <script src="https://gist.github.com/tattwei46/43ad1fbda618e436a2ecb115786c00bc.js"></script>
 
 ![Hello world](https://iswift.ru/images/1_gG7KSUYl1Elmn9OyjPP-Vg.png "Hello world")
 
-### 👉Step 3: Changing from stateless to stateful
+### 👉Шаг 3: Меняем состояние виджета с stateless на stateful
 <script src="https://gist.github.com/tattwei46/33cf7585688ad6d964b49a89da47a514.js"></script>
 
-### 👉Step 4: Replace Hello World with Stack
+### 👉Шаг 4: Replace Hello World with Stack
 Inside the Scaffold body, let’s replace the Hello Word text widget to a stack widget. The stack widget allows us to overlay one widget above the other. The idea is to show circular progress bar when any login or sign up activity is running. In the stack, we will have the Form and the circular progress bar. Inside the Form, we will add a ListView that allows us to put an array of widgets. With that, we are able to refactor out several UI Components and put them inside the ListView.
 ***Pro Tip*** : *Whenever we are using text input, it is better to wrap it around a ListView to prevent rendering error when the soft keyboard shows up due to overflow pixels.*
 
