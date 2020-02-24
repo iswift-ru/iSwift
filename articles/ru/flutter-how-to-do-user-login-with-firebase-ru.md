@@ -71,10 +71,15 @@ You can get the complete source code in the GitHub link at the bottom of the pos
 ![Android](https://iswift.ru/images/1_s5aA2j3HJAONXq1RrBLpGA.png "Android")![IOS](https://iswift.ru/images/1_VdFSnH_gOFIG2QGBY_N9ZA.png "IOS")
 
 
->If you’re interested to know how to get screenshots at your simulators;
->For Android: Simply click the camera icon on the left side of the tool pane. The image will be saved to desktop
->For iOS: [Option 1] Hold and press command + shift + 4. Press the space bar to change Mouse pointer to camera icon. Point to iOS >simulator, click to take screenshot. The image will be saved to desktop.
->For iOS: [Option 2] Select Simulator and press command + S. Thanks JerryZhou for sharing this information.
+>Если вам интересно знать как сделать скриншоты в ваших симуляторах;
+
+>Для Android: Просто нажмите на иконку "камера" на левой стороне панели инструментов. Картинка будет сохранена на рабочем столе.
+
+>Для iOS: [Вариант 1] Нажмите вместе кнопки command + shift + 4. Нажмите клавишу пробела, чтобы изменить указатель мыши на значок камеры.
+
+>Наведите курсор на симулятор iOS, щелкните, чтобы сделать снимок экрана. Картинка будет сохранена на рабочий стол.
+
+>Для iOS: [Вариант 2] Выбирите симулятор и нажмите command + S. Спасибо JerryZhou за то, что поделился этой информацией.
 
 ### 👉Step 2: Replace original code with Hello World
 At main.dart, erase all contents and add the following boilerplate to your file. We are going to create a new file called login_signup_page.dart which has LoginSignupPage class. On your terminal, hit the R key to perform hot reload and you should see “Hello World” on the screen.
