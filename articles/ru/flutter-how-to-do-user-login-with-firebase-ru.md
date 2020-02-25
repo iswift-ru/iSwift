@@ -215,19 +215,19 @@ firebase_database: ^3.0.7```
 
 <script src="https://gist.github.com/tattwei46/35f58c7faebce33c56bddedb1d99cf93.js"></script>
 
-### 👉Step 11: Create class Auth implementing BaseAuth
-This is where we define what the methods in the abstract class do.
+### 👉Шаг 11: Создание класса Auth, реализующего BaseAuth
+Здесь мы определяем, что делают методы абстрактного класса.
 
 <script src="https://gist.github.com/tattwei46/90e0006da3043a7322f351545879085c.js"></script>
 
-### 👉Step 12: Create HomePage
-Once user logs in successfully, they will be directed into home page.
+### 👉Шаг 12: Создайте HomePage
+После успешного входа пользователя он будет направлен на главную страницу.
 
 <script src="https://gist.github.com/tattwei46/9a4892eb2a344ad1e0f556009b4942ca.js"></script>
 
-### 👉Step 13: Create RootPage
-So RootPage which is a stateful page, actually decides whether to show user LoginSignupPage or HomePage based on their authentication status.
-Hence, we keep track of the authentication status using :
+### 👉Шаг 13: Создайте RootPage
+Итак, RootPage является stateful страницей и фактически определяет, показывать ли пользователю LoginSignupPage или HomePage, на основе их состояния аутентификации.
+Таким образом, мы отслеживаем состояние аутентификации с помощью:
 ```enum AuthStatus {
   NOT_DETERMINED,
   NOT_LOGGED_IN,
