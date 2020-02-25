@@ -123,15 +123,15 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 
 <script src="https://gist.github.com/tattwei46/87856f547b4708b46fc290d67bb11744.js"></script>
 
-Next we build secondary button to toggle between login and signup. We use ```FlatButton``` instead of ```RaisedButton``` used in primary button. The reason is if you have 2 buttons and would like to make 1 more distinctive than the other, ```RaisedButton``` is the right choice as it catches more attention compare to ```FlatButton```.
+Дальше мы сделаем вторую кнопку для выбора между входом и регистрацией. Мы используем ```FlatButton``` вместо ```RaisedButton``` в первой кнопке. Резоннее использовать 2 кнопки, нежели одну особенную (общую) ```RaisedButton``` это правильный выбор так как она привлекает больше внимание чем ```FlatButton```.
 
 <script src="https://gist.github.com/tattwei46/58eb89108e73923037f058f3fb58ba5a.js"></script>
 
-For switching between login and signup, it is just doing set state with toggled bool ```_isLoginMode```. Also we have a ```resetForm ```method to clear the inputs of the *TextFormField (this is kept in GlobalKey of FormState which will be explained later below).*
+For switching between login and signup, it is just doing set state with toggled bool ```_isLoginMode``` Для смены между входом и авторизацией. Так же у нас есть ```resetForm ```метод очищающий введёные данные *TextFormField (эта информация хранится в GlobalKey  в FormState об этом я объяснено попозже).*
 
 <script src="https://gist.github.com/tattwei46/d39a7135b80a50913bd70ab48dc9b3d1.js"></script>
 
-Next, we are build UI to display error messages to user. These messages could be error thrown by Firebase or invalid form input. If there is a new error message, we will ```setstate``` with new values of ```_errorMessage```
+Дальше, мы создадим пользовательский интерфейс выводящий ошибку для пользователей. These messages could be error thrown by Firebase or invalid form input. If there is a new error message, we will ```setstate``` with new values of ```_errorMessage```
 
 <script src="https://gist.github.com/tattwei46/5747f69581a87278c22f7c556de59174.js"></script>
 
