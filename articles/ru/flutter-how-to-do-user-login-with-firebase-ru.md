@@ -131,7 +131,7 @@ For switching between login and signup, it is just doing set state with toggled 
 
 <script src="https://gist.github.com/tattwei46/d39a7135b80a50913bd70ab48dc9b3d1.js"></script>
 
-Дальше, мы создадим пользовательский интерфейс выводящий ошибку для пользователей. These messages could be error thrown by Firebase or invalid form input. If there is a new error message, we will ```setstate``` with new values of ```_errorMessage```
+Дальше, мы создадим пользовательский интерфейс выводящий ошибку для пользователей. These messages could be error thrown by Firebase or invalid form input. Эти сообщения могут выдаваться Firebase или при недопустимых значениях в форме ввода. Если появляется новое сообщение об ошибке, меняется состояние ```setstate``` с новым значением ```_errorMessage```. 
 
 <script src="https://gist.github.com/tattwei46/5747f69581a87278c22f7c556de59174.js"></script>
 
