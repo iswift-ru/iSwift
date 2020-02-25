@@ -179,11 +179,11 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 
 ![google-services.json](https://iswift.ru/images/1_Jom5-2bcarPMsrIEbMK3mw.png "google-services.json")
 
-We need to add the Google Services Gradle plugin to read google-services.json. In the ```/android/app/build.gradle``` add the following to the last line of the file.
+Нам нужно добавить Google Services Gradle плагин для чтения google-services.json. В строке ```/android/app/build.grade``` добавьте следующую строку к последней строке файла.
 
 ```apply plugin: 'com.google.gms.google-services'```
 
-```In android/build.gradle```, inside the buildscript tag, add new dependency.
+```In android/build.gradle```, внутри buildscript добавьте новую зависимость.
 ```buildscript {
    repositories {
       //...
@@ -192,24 +192,27 @@ dependencies {
    //...
    classpath 'com.google.gms:google-services:3.2.1'
 }```
-For iOS, open ```ios/Runner.xcworkspace``` to launch Xcode. The package name can be found in bundle identifier at Runner view.
-Download the config file which is ```GoogleService-info.plist``` (iOS).
-Drag the ```GoogleService-info.plist``` into the Runner subfolder inside Runner as shown below.
+Для iOS, откройте ```ios/Runner.xcworkspace``` запустите Xcode. Имя пакета можно найти в пакете идентификации Runner.
+Скачайте конфигурационный файл ```GoogleService-info.plist``` (iOS).
+Переместите ```GoogleService-info.plist``` в Runner подпапку внутри Runner как показано ниже.
 
-### 👉Step 7: Add dependencies in pubspec.yaml
-Next we need to add *firebase_auth* and *firebase_database* dependency in pubspec.yaml. To get the latest version number, go to https://pub.dartlang.org/ and search for the dependency.
-
+### 👉Шаг 7: Добавьте зависимости в pubspec.yaml
+Дальше мы должны добавить *firebase_auth* и *firebase_database* зависимости в pubspec.yaml. Что бы получить номер последней версии, перейдите по ссылке https://pub.dartlang.org/ и найдите необходимую зависимость.
 ```firebase_auth: ^0.14.0+5
 firebase_database: ^3.0.7```
 
-### 👉Step 8: Import Firebase Auth
+### 👉Шаг 8: Импорт Firebase Auth
 
 ```import 'package:firebase_auth/firebase_auth.dart';```
 
-### 👉Step 9: Enable sign up using email and password at Firebase
+### 👉Шаг 9: Выбирите авторизацию используя email and password в Firebase
+
 ![Sign up](https://iswift.ru/images/1_UCo6SN3eK-Rn30YMSSWaVA.png "sign up")
-### 👉Step 10: Create abstract class BaseAuth
-Create new file call authentication.dart. We are going to create abstract class BaseAuth. The class only contains the signature of the methods and this ensures minimal changes if we decided to change from Firebase to something else.
+
+### 👉Шаг 10: Создайте абстрактный класс BaseAuth
+
+Создайте новый файл с именем authentication.dart. Мы собираемся создать абстрактный класс BaseAuth. Класс содержит только сигнатуру методов и это обеспечивает минимальные изменения, если мы решили перейти от Firebase к чему-то другому.
+
 <script src="https://gist.github.com/tattwei46/35f58c7faebce33c56bddedb1d99cf93.js"></script>
 
 ### 👉Step 11: Create class Auth implementing BaseAuth
