@@ -109,12 +109,12 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 <script src="https://gist.github.com/tattwei46/6f5beb00e244f28dc0676b5af217e9bf.js"></script>
 <script src="https://gist.github.com/tattwei46/3f0b3b871aba0f067817e6ceabc3181e.js"></script>
 
-Next we will add 2 *TextFormField* for our email and password. TextFormField allows us to add ```validator``` and ```onSaved```. These are callback methods will be triggered when ```form.validate()``` and ```form.save()``` is called (TextFormField is inside Form). So for example if ```form.save()``` is called, the value in the text form field is copied into another local variable.
-For the ```validator```, we will check for empty field inputs and update ```_errorMessage``` to be shown to user. We also need to create variables ```_email``` and ```_password``` to store the values which are then used for authentication later.
-For password, we set ```obsecureText: true``` to hide user password.
-We set ```maxLines``` to 1 to fix the height of the textformfield.
-```autofocus``` is set to ```false``` to prevent the field getting focused when the page is loaded.
-Both email and password values are ```trim()``` to remove any whitespaces.
+Дальше мы добавим два *TextFormField* для нашего email and password. TextFormField позволит нам добавить ```validator``` и ```onSaved```. Эти методы обратного вызова будут инициированы, когда ```form.validate()``` и ```form.save()``` (TextFormField находятся внутри Form). Итак, для примера если метод ```form.save()``` вызван, значение из текстового поля копируется в другую локальную переменную.
+Для ```validator```, мы будем проверять на пустые поля при отправке м обновлять ```_errorMessage``` для отображения пользователю. We also need to create variables Мы так же должны создать переменные ```_email``` и ```_password``` хронящие значения, которые будут использованы для авторизации в дальнейшем
+Для password, мы установим ```obsecureText: true``` для скрытия пользовательского пароля.
+Для фиксации высоты текстового поля ```maxLines``` устанавливается значение 1.
+```autofocus``` установим ```false``` чтобы предотвратить фокусировку поля при загрузке страницы.
+Оба значения email и password  ```trim()``` очистим от пробелов.
 
 <script src="https://gist.github.com/tattwei46/98a6a7411263966ae939d15e95b2e483.js"></script>
 
