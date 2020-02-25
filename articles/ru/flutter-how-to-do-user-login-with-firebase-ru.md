@@ -118,8 +118,8 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 
 <script src="https://gist.github.com/tattwei46/98a6a7411263966ae939d15e95b2e483.js"></script>
 
-Далее создадим две кнопки. Первая для пользователей выполняющих действия  вход/регистрация and one secondary to switch form mode(between login and signup). For keeping track of the form mode, we use a boolean ```_isLoginForm```
-When the primary button press event is detected, we will trigger method ```_validateAndSubmit``` which validates our *TextFormField* inputs and perform login/signup.
+Далее создадим две кнопки. Первая для пользователей выполняющих действия вход/регистрация и вторая для смены режима формы(между входом и авторизацией). Для отслеживания режима формы мы используем boolean ```_isLoginForm```
+При обнаружении события нажатия основной кнопки инициируется метод ```_ validateAndSubmit```, который проверяет ввод *TextFormField* и выполняет вход/регистрацию.
 
 <script src="https://gist.github.com/tattwei46/87856f547b4708b46fc290d67bb11744.js"></script>
 
