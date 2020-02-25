@@ -1,5 +1,5 @@
-<h1 align="center">Запись, чтение, обновление и удаление информации в Realtime database во Flutter</h1>
-<h2 align="center">Cloud firestore < Realtime database</h2>
+# Запись, чтение, обновление и удаление информации в Realtime database во Flutter
+## Cloud firestore < Realtime database
 ![Cloud firestore](https://iswift.ru/images/1_Ld2cOA4_fiEhejTmQixYkQ.jpeg)
 <p align="center">Realtime db и cloud firestore</p>
 
