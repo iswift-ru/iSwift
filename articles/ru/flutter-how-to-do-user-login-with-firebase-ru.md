@@ -127,7 +127,7 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 
 <script src="https://gist.github.com/tattwei46/58eb89108e73923037f058f3fb58ba5a.js"></script>
 
-For switching between login and signup, it is just doing set state with toggled bool ```_isLoginMode``` Для смены между входом и авторизацией. Так же у нас есть ```resetForm ```метод очищающий введёные данные *TextFormField (эта информация хранится в GlobalKey  в FormState об этом я объяснено попозже).*
+Для переключения между входом и авторизацией выполняется определение состояния bool ```_isLoginMode```. Так же у нас есть ```resetForm ```метод очищающий введёные данные *TextFormField (эта информация хранится в GlobalKey  в FormState об этом я объяснено попозже).*
 
 <script src="https://gist.github.com/tattwei46/d39a7135b80a50913bd70ab48dc9b3d1.js"></script>
 
@@ -135,12 +135,13 @@ For switching between login and signup, it is just doing set state with toggled 
 
 <script src="https://gist.github.com/tattwei46/5747f69581a87278c22f7c556de59174.js"></script>
 
-Finally, back to our form, we need to create a GlobalKey to keep our form state. This keeps track of the user typed email and password.
-Add the following in class ```_LoginSignupPageState```
+Наконец то вернёмся к нашей Form, нам нужно создать GlobalKey для отлавливания состояния нашей формы. Это позволяет отслеживать введенный пользователем адрес электронной почты и пароль.
+
+Добавьте следующее в класс ```_LoginSignupPageState``` 
 
 ```final _formKey = new GlobalKey<FormState>();```
 
-And linked it under _showForm(), key properties
+И свяжите их под _showForm(), ключевые свойства
 
 ```Widget _showForm() {
   return new Container(
@@ -161,20 +162,20 @@ And linked it under _showForm(), key properties
       ));
 }```
 
-Let’s arrange those individual UI components and put it back to our *ListView*.
+Давайте расположим эти отдельные компоненты пользовательского интерфейса и вызовим их в наш *ListView*.
 
 <script src="https://gist.github.com/tattwei46/399aaee36ae6d91d705d19a30d7aa192.js"></script>
 
-Let’s try to run our project using ```flutter run``` command
+Теперь попытаемся запустить наш проект используя команду ```flutter run```
 
 ![Flutter login demo](https://iswift.ru/images/1_dgisA_6Dmtsdhz_GbmFrBg.png "Flutter login demo")
-<p align="center">TextFormField validator in action</p>
+<p align="center">TextFormField валидатор действий</p>
 
-### 👉Step 6: Register project with Firebase
-Go to https://console.firebase.google.com and register new project.
-For android, click the android icon. Enter your package name which can be found in ```android/app/src/main/AndroidManifest.xml```
-Download the config file which is ```google-services.json``` (Android).
-Drag the ```google-services.json``` into app folder in project view
+### 👉Шаг 6: Регистрируем проект в Firebase
+Перейдите https://console.firebase.google.com и зарегистрируйте новый проект.
+Для android, нажмите на иконку android. Ввведите Ваш package name, который вы можете найти ```android/app/src/main/AndroidManifest.xml```
+Скачайте конфигурационный файл ```google-services.json``` (Android).
+Перетащите ```google-services.json``` в папку приложения в представлении проекта.
 
 ![google-services.json](https://iswift.ru/images/1_Jom5-2bcarPMsrIEbMK3mw.png "google-services.json")
 
