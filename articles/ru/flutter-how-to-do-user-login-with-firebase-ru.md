@@ -99,12 +99,12 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 
 <script src="https://gist.github.com/tattwei46/bac22f40a192fa6677263d2a6a29363d.js"></script>
 
-### 👉Step 5: Building each UI components
-We start with building our circular progress bar. Thanks to Flutter, this is available as built-in widget call ```CircularProgressIndicator``` . We will use ```bool _isLoading``` to determine whether to show the ```CircularProgressIndicator``` or not.
+### 👉Шаг 5: Делаем другие компоненты пользовательского интерфейса
+Мы начали с построения нашего индикатора прогресса загрузки. Спасибо Флаттеру, это доступно через вызов виджета ```CircularProgressIndicator``` . Мы будем использовать ```bool _isLoading``` не зависимо от того будет ли показываться ```CircularProgressIndicator``` или нет. 
 
 <script src="https://gist.github.com/tattwei46/e6157ce651461de1b8171c8cb5e2f8fb.js"></script>
 
-Next, we will build our form logo. In the repository, there is an asset folder with the following flutter-icon.png file. To import into our project, add the following line in pubspec.yaml followed by ```flutter packages get``` command.
+Дальше, мы сделаем логотип для нашей Form. В репозитории имеется папка asset со следующим файлом flutter-icon.png. Чтобы импортировать в наш проект, добавьте следующую строку в pubspec.yaml, а затем команду "flutter packages get".
 
 <script src="https://gist.github.com/tattwei46/6f5beb00e244f28dc0676b5af217e9bf.js"></script>
 <script src="https://gist.github.com/tattwei46/3f0b3b871aba0f067817e6ceabc3181e.js"></script>
