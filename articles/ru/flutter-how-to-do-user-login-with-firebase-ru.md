@@ -233,20 +233,21 @@ firebase_database: ^3.0.7```
   NOT_LOGGED_IN,
   LOGGED_IN,
 }```
-When the RootPage is loaded, we will try to get the userid and set ```AuthStatus```
+Когда RootPage загрузится, мы пробуем получить userid и установить ```AuthStatus```
 <script src="https://gist.github.com/tattwei46/346239c19e9bd8ec24caa4bc440ccea9.js"></script>
 
-We have 2 callback functions for login and logout. So when user is at LoginSignupPage and successfully logs in, it will trigger the login callback in RootPage, that sets the ```AuthStatus``` to ```LOGGED_IN``` and subsequently show user the HomePage.
-The same happens when user successfully logs out when in HomePage.
+У нас есть две возвращающие функции Вход и Выход.  Когда пользователь находится на LoginSignupPage и успешно входит в систему, он инициирует обратный вызов входа в систему на RootPage, которая устанавливает для ```AuthStatus``` значение ```LOGINED _ IN``` и затем показывает пользователю HomePage.
+То же самое происходит когда пользователь удачно выходит из системы со страницы HomePage.
 
 <script src="https://gist.github.com/tattwei46/ee5bc1e09a7864a65110ad76c9dd36ad.js"></script>
 
-Here is the part, on showing user the correct page according to their AuthStatus. More explaination on auth in the subsequent steps.
+Вот часть, показывающая пользователю правильную страницу в соответствии с его состоянием AuthStatus. More explaination on auth in the subsequent steps. Дополнительная информация об авторизации будет на последующих шагах.
 
 <script src="https://gist.github.com/tattwei46/743be7c679296c04db1b57d22ae53e99.js"></script>
 
-### 👉Step 14: Initialize Auth in main
-In main.dart, when we call new RootPage, we initialize new ```Auth()``` and pass into RootPage as shown.
+### 👉Шаг 14: Инициализация Auth в main
+На странице main.dart когда мы вызываем RootPage, мы инициализируем новый метод ```Auth()``` и переходим в RootPage как показано на картинке.
+ 
 
 <script src="https://gist.github.com/tattwei46/df8645225b187220f372f94fff96519d.js"></script>
 
