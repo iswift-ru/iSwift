@@ -92,7 +92,7 @@ At main.dart, erase all contents and add the following boilerplate to your file.
 ### 👉Шаг 3: Меняем состояние виджета с stateless на stateful
 <script src="https://gist.github.com/tattwei46/33cf7585688ad6d964b49a89da47a514.js"></script>
 
-### 👉Шаг 4: Replace Hello World with Stack
+### 👉Шаг 4: Замена Hello World на Stack
 Внутри Scaffold body, заменим текстовый виджет Hello Word на stack виджет. Stack виджет позволит нам наложить один виджет на другой.  Идея в том, чтобы показывать круговой процесс загрузки , когда кто то выполняет действие регистрирации или авторизации. В Stack мы будем иметь Форму и кргуовой индикатор прогресса. Внутри Form мы добавим ListView, который позволит нам вставить массив виджетов. Таким образом, мы можем выполнить рефакторинг нескольких компонентов пользовательского интерфейса (UI) и поместить их в ListView. 
 
 ***Профессиональный совет*** : *Всякий раз, когда мы используем ввод текста, лучше обернуть его виджетом ListView, чтобы предотвратить ошибку рендеринга (отрисовки) при появлении виртуальной клавиатуры из-за переполнения пикселов.*
@@ -254,45 +254,47 @@ firebase_database: ^3.0.7```
 In root_page.dart, we receive the initialized auth as follows:
 <script src="https://gist.github.com/tattwei46/72c47af73bd30767e227e9a01f944a6e.js"></script>
 
-### 👉Step 15: Link up LoginSignupPage and RootPage
-In the RootPage class, we call LoginSignupPage and pass in auth that was pass in earlier from main.dart and also linked our callback function. We use widget.auth instead of auth is because this variable was pass into rootpage class from MyApp class instead of initialized in rootpage.
-Here is snapshot of code inside RootPage class that calls LoginSignupPage
+### 👉Шаг 15: Соединим LoginSignupPage и RootPage
+ В классе RootPage мы вызовим функцию LoginSignupPage и проходим авторизацию, которая была передана ранее из main.dart а так же соединим наши функции обратнго вызова. Мы используем widget.auth вместо авторизации, потому что эта переменная была передана в класс RootPage из класса MyApp вместо инициализации в RootPage.
+
+Ниже приведён снимок кода класса RootPage который вызывает LoginSignupPage
 
 <script src="https://gist.github.com/tattwei46/14260d7c0f430314758bb6318841523c.js"></script>
 
-Here is snapshot of code inside LoginSignupPage that receives the auth and loginCallback
+Ниже приведён снимок кода метода LoginSignupPage который принимает авторизацию и loginCallback
 <script src="https://gist.github.com/tattwei46/bea89f750c620f6246d72f7c228fff7b.js"></script>
 
-### 👉Step 16: Use Auth inside LoginSignupPage
+### 👉Шаг 16: Используем Auth внутри LoginSignupPage
 
-We use ```widget.auth.signIn``` that was implemented according to abstract class BaseAuth to log user in. The underlying method uses Firebase ```signInWithEmailAndPassword``` which returns a future value. A future is part of asynchronous operation that does not block the main thread. Future class is associated with **async** and **await** keyword. Hence the method needs to have await and the external wrapper function needs to have async. So we enclose the login and signup methods with try catch block. If there was an error, our catch block should be able to capture the error message and display to the user.
+Для входа пользователя в систему, мы используем ```widget.auth.signIn```, который был реализован согласно абстрактному классу BaseAuth. Базовый метод использует Firebase ```signInWithEmailAndPassword``` который возвращает будущие значения. Будущее является частью асинхронной операции, которая не блокирует основной поток. Будущий класс связан с ключевыми славами такие как **async** и **await**. Следовательно, метод должен быть ожидаемым, а внешняя функция обертки должна иметь асинхронный режим. Мы включаем методы авторизации и регистрации с возможностью поймать блокировку. Если выпадает ошибка, наш улавливатель ошибок способен захватить сообщение ошибки и вывести на монитор пользователю.
 
 <script src="https://gist.github.com/tattwei46/28d2e93b434fcf02553aba3417036fd2.js"></script>
 
-### 👉Step 17: Try to sign up a user
-Let’s try to sign up a user by entering an email and password.
+### 👉Шаг 17: Попытка регистрации пользователя
+Попытаемся зарегистрировать пользователя вводя email and password.
 
->If you encounter something like below, this is because there is an extra spacing at the end of your email. That is why I have added >trim to email
+>Если Вы встречали ошибку, как указано ниже, это потому что имеется лишний пробел в конце email. Поэтому я хочу добавить очистку (trim) email. 
 
 ```I/flutter (14294): Error PlatformException(exception, The email address is badly formatted., null)```
 
->If you encounter something like below, change your password to be at least 6 characters long.
+>Если вы встретили ошибку, как указано, ниже, необходимо сделать пароль длинной не меньше 6 символов.
 
 ```I/flutter (14294): Error PlatformException(exception, The given password is invalid. [ Password should be at least 6 characters ], null)```
-Finally once success, you should be able to see in your terminal the following line. The random string is the user ID.
+Наконец, после успеха, вы можете увидеть в терминале следующую строчку. Набор символов это идентификатор пользователя (id)
+
 
 ```I/flutter (14294): Signed up JSwpKsCFxPZHEqeuIO4axCsmWuP2```
 
-Similarly if we try to sign in the same user we signed up, we should get something like this:
+Аналогично, если мы пытаемся Войти тем же самым пользователем, которого мы зарегистрировали, мы должны получить что-то подобное:
 
 ```I/flutter (14294): Signed in JSwpKsCFxPZHEqeuIO4axCsmWuP2```
 
-![Debug banner removed](https://iswift.ru/images/1_hfrGL0FlyfbmVCrZPBKFmw.png "Debug banner removed")
-<p align="center">Debug banner removed</p>
+![Debug banner removed](https://iswift.ru/images/1_hfrGL0FlyfbmVCrZPBKFmw.png "Удаляем банер отладки")
+<p align="center">Удаляем банер отладки</p>
 
-**ProTip:** Notice the debug ribbon at the top right corner of the app, you can easily remove it by adding the following line inside MaterialApp widget in main.dart
+**Профессиональный совет:** Уведомление о режиме отладки в правом верхнем углу приложения, вы можете легко удалить добавив следующую строку внутри MaterialApp виджета на странице main.dart
 ```debugShowCheckedModeBanner: false,```
 
-🎊🎉Success🎉🎊
+🎊🎉Ура. Победа!🎉🎊
 
 ![Success](https://iswift.ru/images/1_lEkb1HvKFvsCmSseNFZLhA.gif "Success")
