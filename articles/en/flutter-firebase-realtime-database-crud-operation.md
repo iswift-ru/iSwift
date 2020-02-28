@@ -10,4 +10,4 @@ Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database i
 * **Security**: – You can define your security rules which controls who has what access to your Firebase database. You can also integrate Firebase Authentication to control access to your data.
 
 
-[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/SjgaBYGsEYw)
+[![youtube](https://iswift.ru/images/2020-02-28_12-09-19.png)](https://youtu.be/SjgaBYGsEYw)
