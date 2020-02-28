@@ -9,4 +9,5 @@ Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database i
 * **Offline**: - The Firebase Realtime Database persists data on your device. The data is always available, even app offline. The data is automatically synced once the app comes back online.
 * **Security**: – You can define your security rules which controls who has what access to your Firebase database. You can also integrate Firebase Authentication to control access to your data.
 
-![Тут текст](https://youtu.be/SjgaBYGsEYw)
+
+[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/SjgaBYGsEYw)
