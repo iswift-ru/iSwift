@@ -59,3 +59,106 @@ Firebase provides a great way to make database secure. We can apply a way to ide
   }
 }
 ```
+3. You can also use the following rules to validate data before inserting into the database. You can validate the name to be less than 50 chars and email to be valid using email regular expression.
+
+**Security & Rules**
+```
+{
+    "rules": {
+        ".read": true,
+        ".write": true,
+        "users": {
+            "$user": {
+                "name": {
+                    ".validate": "newData.isString() && newData.val().length < 50"
+                },
+                "email": {
+                    ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+                }
+            }
+        }
+    }
+}
+```
+
+### How can perform CRUD Operations? 
+To perform any operation on to database whether it can be read or write, you need to get the reference of database node. The below code gives you reference to database JSON top node. From here you need to use the child node names to traverse further.
+
+**Getting node refernce**
+
+```
+FirebaseDatabase database = new FirebaseDatabase();
+DatabaseReference _userRef;=database.reference().child('user');   
+```
+
+### Inserting Data
+To insert data, you can use set(key, value) method on to database reference path. This will create the value on the path provided to a given reference. As you can see below, we inserting a user information to user reference node. 
+
+**Add a node in Database**
+```
+addUser(User user) async {
+    final TransactionResult transactionResult =
+        await _counterRef.runTransaction((MutableData mutableData) async {
+      mutableData.value = (mutableData.value ?? 0) + 1;
+
+      return mutableData;
+    });
+
+    if (transactionResult.committed) {
+      _userRef.push().set(<String, String>{
+        "name": "" + user.name,
+        "age": "" + user.age,
+        "email": "" + user.email,
+        "mobile": "" + user.mobile,
+      }).then((_) {
+        print('Transaction  committed.');
+      });
+    } else {
+      print('Transaction not committed.');
+      if (transactionResult.error != null) {
+        print(transactionResult.error.message);
+      }
+    }
+  }
+```
+
+### Reading Data
+To read the data, we can use FirebaseAnimatedList widget of Firebase database plugin. In which, we pass the root reference of a node in the query parameter. This event will be triggered whenever there is a change in data in realtime. As you can see below, as each parameter define its feature. In the itemBuilder parameter, we'll get the actual value of an item.
+
+**FirebaseAnimatedList**
+
+```
+body: new FirebaseAnimatedList(
+        key: new ValueKey<bool>(_anchorToBottom),
+        query: databaseUtil.getUser(),
+        reverse: _anchorToBottom,
+        sort: _anchorToBottom
+            ? (DataSnapshot a, DataSnapshot b) => b.key.compareTo(a.key)
+            : null,
+        itemBuilder: (BuildContext context, DataSnapshot snapshot,
+            Animation<double> animation, int index) {
+          return new SizeTransition(
+            sizeFactor: animation,
+            child: showUser(snapshot),
+          );
+        },
+      ),
+```
+
+### Updating Data
+To update data, you can use the **update(key, value)** method by passing the new value. 
+
+**Updating data**
+
+```
+void updateUser(User user) async {
+    await _userRef.child(user.id).update({
+      "name": "" + user.name,
+      "age": "" + user.age,
+      "email": "" + user.email,
+      "mobile": "" + user.mobile,
+    }).then((_) {
+      print('Transaction  committed.');
+    });
+  }
+```  
