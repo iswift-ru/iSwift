@@ -31,4 +31,5 @@ Firebase provides great support when your application in offline mode. It automa
 
 FirebaseDatabase database = new FirebaseDatabase();
  database.setPersistenceEnabled(true);
- database.setPersistenceCacheSizeBytes(10000000);   ```    
+ database.setPersistenceCacheSizeBytes(10000000);   
+ ```
