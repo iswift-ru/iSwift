@@ -3,7 +3,7 @@ Firebase Realtime Database это база данных в облочном хо
 
 ![flutter firebase database](https://iswift.ru/images/flutter_firebase_database.png "flutter firebase database")
 
-Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database is one of the NoSQL databases. Firebase store all the data in JSON format and any changes in data reflects immediately by performing a sync operation across all the platforms. This allows us to build a flexible realtime app easily with minimal efforts. 
+Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database is one of the NoSQL databases. В наше время базы данных NoSQL набирают популярность и Firebase Realtime Database одна из этих NoSQL баз. Firebase хранит все данные в JSON формате и любые изменения в данных немедленно отражаются путем выполнения операции синхронизации на всех платформах. Это позволяет нам легко создавать гибкое приложение в реальном времени с минимальными усилиями.
 
 ## Firebase Realtime Database feature 
 * **Realtime**: – It means the data is synchronized with all connected devices within milliseconds of changes being made to the data.
