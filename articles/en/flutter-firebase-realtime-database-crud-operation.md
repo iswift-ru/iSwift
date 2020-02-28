@@ -26,9 +26,7 @@ As we know, the Firebase realtime database is a schema-less and NoSQL based data
 ### How can enable offline persistence in Flutter?
 Firebase provides great support when your application in offline mode. It automatically stores the data offline when there is no internet connection. When the device connects to the internet, all the data will be pushed to the realtime database. Disk persistence can be enabled by calling below code. 
 
-```Persistence Setting
-
-
+```**Persistence Setting**
 FirebaseDatabase database = new FirebaseDatabase();
  database.setPersistenceEnabled(true);
  database.setPersistenceCacheSizeBytes(10000000);   
