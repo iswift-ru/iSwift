@@ -33,3 +33,29 @@ FirebaseDatabase database = new FirebaseDatabase();
  database.setPersistenceEnabled(true);
  database.setPersistenceCacheSizeBytes(10000000);   
  ```
+
+### How can manage Security & Rules?
+Firebase provides a great way to make database secure. We can apply a way to identify user role while performing read and write operations. These rules will acts a security layer on the server before perform any CRUD operation. Let's check it.
+
+1. The below rules allow authenticated users can perform read or write operation. 
+
+**Security & Rules**
+```
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}       
+```
+2. Below rules allow everyone can read & write data without authentication. We'll use it in the demo app.
+
+**Security & Rules**
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
