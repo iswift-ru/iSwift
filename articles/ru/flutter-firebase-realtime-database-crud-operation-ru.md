@@ -5,19 +5,19 @@ Firebase Realtime Database это база данных в облочном хо
 
 Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database is one of the NoSQL databases. В наше время базы данных NoSQL набирают популярность и Firebase Realtime Database одна из этих NoSQL баз. Firebase хранит все данные в JSON формате и любые изменения в данных немедленно отражаются путем выполнения операции синхронизации на всех платформах. Это позволяет нам легко создавать гибкое приложение в реальном времени с минимальными усилиями.
 
-## Firebase Realtime Database feature 
-* **Realtime**: – It means the data is synchronized with all connected devices within milliseconds of changes being made to the data.
-* **Offline**: - The Firebase Realtime Database persists data on your device. The data is always available, even app offline. The data is automatically synced once the app comes back online.
-* **Security**: – You can define your security rules which controls who has what access to your Firebase database. You can also integrate Firebase Authentication to control access to your data.
+## Firebase Realtime Database особенности
+* **Реальное время**: – Это означает что данные синхронизируются со всеми подключёнными устройствами в течение миллисикунд после изменения данных.
+* **Offline**: - Firebase Realtime Database сохраняет данные на вашем устрйостве. Данные всегда доступны, даже в автономном режиме. Данные автоматически синхронизируются, когда приложение вернётся в интернет.
+* **Security**: – You can define your security rules which controls who has what access to your Firebase database. Вы можете управлять правилами безопасности, для определения кто имеет доступ к вашей базе данных Firebase. Вы также можете интегрировать Firebase Авторизацию для контроля получения доступа к данным.
 
 
 [![youtube](https://iswift.ru/images/2020-02-28_12-09-19.png)](https://youtu.be/SjgaBYGsEYw)
 
-In this post, we'll see the basics integration of Firebase realtime database and build a Flutter App that allows us to perform the CRUD operations with Firebase Database in a ListView. The final output of the example look like above video.  
+В этой статье, мы рассмотрим базовую интеграцию с Firebase Realtime базой данных и создадим Флаттер приложение, которое позволит нам выполнять CRUD действия в виджете ListView в базе данных Firebase.  
 
-If you are new to Firebase, I suggest you read our other post about Firebase configuration and Firebase Auth to improve your knowledge. On the basis of the previous post, we assuming you have configured Flutter app with Firebase console. 
+Если Вы новичёк в Firebase, я советую вам прочитать нашу другую статью о Конфигурации и авторизации Firebase, что улучшит понимание материала. Исходя из предыдущего предложения, мы предполагаем, что вы настроили приложение Flutter с консолью Firebase. 
 
-Before dive into the application development, i would like to give you basic information about performing CRUD operations and other aspects of the realtime database. Later we’ll combine all these concepts together to build a simple app with Firebase realtime database as back-end. 
+Перед погружением в разработку приложения, я хотел бы дать вам базовую информацию о выполнении CRUD действий и других аспектов работы в базе данных в режиме реального времени. Позднее мы объединим все эти понятия вместе для создания простого приложения с Firebase realtime базой данных как бэк-енд.
 
 ## How data store on Firebase cloud?
 As we know, the Firebase realtime database is a schema-less and NoSQL based database. We can store the entire database in a big JSON tree with multiple nodes format. So, before start application development. We need to prepare the JSON structure in a way that the data is accessible in an easier way by avoiding nesting of child nodes. As you can see below,  we have prepared a structure for this example application. We storing a list of user profiles and user count in the JSON tree. 
