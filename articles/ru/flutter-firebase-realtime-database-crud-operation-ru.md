@@ -19,13 +19,13 @@ Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database i
 
 Перед погружением в разработку приложения, я хотел бы дать вам базовую информацию о выполнении CRUD действий и других аспектов работы в базе данных в режиме реального времени. Позднее мы объединим все эти понятия вместе для создания простого приложения с Firebase realtime базой данных как бэк-енд.
 
-## How data store on Firebase cloud?
-As we know, the Firebase realtime database is a schema-less and NoSQL based database. We can store the entire database in a big JSON tree with multiple nodes format. So, before start application development. We need to prepare the JSON structure in a way that the data is accessible in an easier way by avoiding nesting of child nodes. As you can see below,  we have prepared a structure for this example application. We storing a list of user profiles and user count in the JSON tree. 
+## Как данные хранятся в Firebase облаке?
+Как нам известно, база данных Firebase realtime это отсутствие схем и базирование на NoSQL базе данных. Мы можем хранить всю базу данных в большом JSON дереве с различными узлами. Итак, перед началом разработки приложения. We need to prepare the JSON structure in a way that the data is accessible in an easier way by avoiding nesting of child nodes. Мы должны подготовить JSON структуру таким способом, чтобы данные были легко доступны для обхода вложенных дочерних узлов. Как вы увидите ниже, мы приготовили структуру для этого примера приложения. Мы храним список и подсчитываем кол-во пользовательских профилей.  
 
 ![NoSQL](https://iswift.ru/images/nosql.png "NoSQL")
 
-### How can enable offline persistence in Flutter?
-Firebase provides great support when your application in offline mode. It automatically stores the data offline when there is no internet connection. When the device connects to the internet, all the data will be pushed to the realtime database. Disk persistence can be enabled by calling below code. 
+### Как включить автономное сохранение в Flutter?
+Firebase обеспечивает великолепную поддержку когда ваше приложение в автономном режиме. Он автоматически сохраняет данные, когда вы в режиме оффлайн, т.е. нету интернет подключения. When the device connects to the internet, all the data will be pushed to the realtime database. Когда устройство подключается к интернету, все данные отправляются в базу данных Realtime. Disk persistence can be enabled by calling below code. Сохранение на диск может быть включено путем вызова кода ниже.
 
 
 **Persistence Setting**
