@@ -20,7 +20,7 @@ Nowadays NoSQL databases are gaining popularity and Firebase Realtime Database i
 Перед погружением в разработку приложения, я хотел бы дать вам базовую информацию о выполнении CRUD действий и других аспектов работы в базе данных в режиме реального времени. Позднее мы объединим все эти понятия вместе для создания простого приложения с Firebase realtime базой данных как бэк-енд.
 
 ## Как данные хранятся в Firebase облаке?
-Как нам известно, база данных Firebase realtime это отсутствие схем и базирование на NoSQL базе данных. Мы можем хранить всю базу данных в большом JSON дереве с различными узлами. Итак, перед началом разработки приложения. We need to prepare the JSON structure in a way that the data is accessible in an easier way by avoiding nesting of child nodes. Мы должны подготовить JSON структуру таким способом, чтобы данные были легко доступны для обхода вложенных дочерних узлов. Как вы увидите ниже, мы приготовили структуру для этого примера приложения. Мы храним список и подсчитываем кол-во пользовательских профилей.  
+Как нам известно, база данных Firebase realtime это отсутствие схем и базирование на NoSQL базе данных. Мы можем хранить всю базу данных в большом JSON дереве с различными узлами. Итак, перед началом разработки приложения. Мы должны подготовить JSON структуру таким способом, чтобы данные были легко доступны для обхода вложенных дочерних узлов. Как вы увидите ниже, мы приготовили структуру для этого примера приложения. Мы храним список и подсчитываем кол-во пользовательских профилей.  
 
 ![NoSQL](https://iswift.ru/images/nosql.png "NoSQL")
 
@@ -36,10 +36,10 @@ FirebaseDatabase database = new FirebaseDatabase();
  database.setPersistenceCacheSizeBytes(10000000);   
  ```
 
-### How can manage Security & Rules?
-Firebase provides a great way to make database secure. We can apply a way to identify user role while performing read and write operations. These rules will acts a security layer on the server before perform any CRUD operation. Let's check it.
+### How can manage Security & Rules? Как управлять Безопасностью и Правами.
+Firebase имеет отличный способ обеспечить безопасность базы данных. Мы можем использовать способ определения роли пользователя при выполнении операций чтения и записи. Эти правила будут действовать на уровне безопасности сервера перед выполнением каких либо CRUD операций. Давайте проверим это.
 
-1. The below rules allow authenticated users can perform read or write operation. 
+1. Ниже указаны правила позволяющие **авторизованным** пользователям проводить операции чтения и записи.
 
 **Security & Rules**
 ```
