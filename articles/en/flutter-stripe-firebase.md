@@ -21,6 +21,6 @@ This token, you’ll get from Step 2…
 If necessary, add stripe in package.json
 4. For the list of apis provided by Stripe, refer the link.
 5. From flutter side, you need the package stripe_payment
-import 'package:stripe_payment/stripe_payment.dart';
-StripeSource.setPublishableKey("pk_test");
-The publishable key is the Publishable key from the API keys (Stripe)….
+```import 'package:stripe_payment/stripe_payment.dart';
+StripeSource.setPublishableKey("pk_test");```
+**The publishable key is the Publishable key from the API keys (Stripe)….**
