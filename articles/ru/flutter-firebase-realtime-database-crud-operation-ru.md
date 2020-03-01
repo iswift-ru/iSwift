@@ -178,11 +178,11 @@ void updateUser(User user) async {
 ```
 Теперь вы имеете достаточно знаний для начала работы с Флаттер приложением. Давайте создадим его и посмотрим, как интегрировать базу данных в реальном времени с примером приложением. Ниже приведены шаги, которые необходимо выполнить чтобы запутить наш проект используя Firebase realtime database.
 
-### Creating a new Project
-1. Create a new project from File ⇒ New Flutter Project with your development IDE.
-2. Now, configure your application with Firebase cloud. As explained here.
-3. Open pubspec.yaml file and add firebase_database: ^1.0.5 dependency.
-4. Open main.dart file and edit it. As we have set our theme and change debug banner property of Application.
+### Создаём новый проект
+1. Создаём новый проект в вашей среде разработки IDE, File ⇒ New Flutter Project.
+2. Теперь настроим ваше приложение с облаком Firebase. Как объяснено здесь.
+3. Откройте pubspec.yaml файл и добавьте зависимость firebase_database: ^1.0.5 
+4. Откройте файл main.dart и отредактируйте его. Мы задали свою тему и удалили вывеску дебаг в правом верхнем углу приложения (приложение в разработке).
 
 **main.dart**
 
@@ -210,7 +210,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-5. After that create a user.dart file. It is a POJO model that'll contain user information.
+5. After that create a user.dart file. It is a POJO model that'll contain user information. После этого создайте файл user.dart. Это POJO макет, который будет содержать информацию о пользователе. 
 
 **user.dart**
 
@@ -247,7 +247,7 @@ class User {
 }
 ```
 
-6. For code simplicity, i have created a separate file firebase_database_util.dart. Here, i have written all CRUD methods that we'll use to interact with firebase database. Before calling any method of this util. We have to call the initState method to initialize it. 
+6. Для простоты, я создал отдельный файл firebase_database_util.dart. Здесь я записал все CRUD методы, который мы будем использовать для взаимодействия с базой данных Firebase. Перед вызовом любого метода этого util. Для инициализации мы вызываем метод initState.
 
 **firebase_database_util.dart**
 
@@ -356,7 +356,7 @@ class FirebaseDatabaseUtil {
 }
 ```
 
-7. Now start the development of user interface.  To display a list of the user, we have created another file user_dashboard.dart. To understand it deeply, we have written the doc in yellow color of each snippet in this file. So,  read it carefully to the better understanding of the following widget.
+7. Теперь начнём разработку пользовательского интерфейса. Для вывода на экран списка пользователей создадим другой файл user_dashboard.dart. Для лучшего понимания я закоментировал сноски в документе. Поэтому, читатйте внимательно, для лучшего понимания в следующем виджете.
 
 **user_dashboard.dart**
 
