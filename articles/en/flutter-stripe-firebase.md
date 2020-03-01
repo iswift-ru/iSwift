@@ -26,3 +26,23 @@ StripeSource.setPublishableKey("pk_test");```
 **The publishable key is the Publishable key from the API keys (Stripe)….**
 ![API keys Stripe](https://iswift.ru/images/1_ujzs7Q_h-RJ3LZc7CcNsNA.png "API keys Stripe")
 
+In the cloud function side, you need only this :
+> const stripe = require(‘stripe’)(functions.config().stripe.token);
+**Next…**
+For starting communication with Stripe, **you need to have a token…**(which Stripe recommends to generate from the Client side using its libraries)…
+In our case, flutter package handles it internally (**when we add card**)…
+
+![ADD a card](https://iswift.ru/images/1_9qSmfi5TyqN5VPhjTXr4yQ.png "Add a card")
+
+```StripeSource.addSource().then((String token) {
+    print(token); //your stripe card source token
+});```
+Here, you receive the token, which you need to pass / store for successive transactions with Stripe…
+**Stripe Call 1 :**
+> stripe.customers.createSource(customer, { source: token });
+When you create a new card, you must specify a customer or recipient on which to create it.
+where token : from above image , customer : your authenticated customer (we are using Firebase Auth by Google)
+**Stripe Call 2 :**
+> stripe.charges.create(charge, { idempotency_key: idempotentKey });
+
+![Flutter + Stripe + Firebase— Buy](https://iswift.ru/images/1_lhbywA30vmts6PcCgmiMjQ.png "Flutter + Stripe + Firebase— Buy")
