@@ -44,12 +44,14 @@ StripeSource.addSource().then((String token) {
 });
 ```
 Here, you receive the token, which you need to pass / store for successive transactions with Stripe…
+
 **Stripe Call 1 :**
 
 > stripe.customers.createSource(customer, { source: token });
 
 When you create a new card, you must specify a customer or recipient on which to create it.
 where token : from above image , customer : your authenticated customer (we are using Firebase Auth by Google)
+
 **Stripe Call 2 :**
 
 > stripe.charges.create(charge, { idempotency_key: idempotentKey });
