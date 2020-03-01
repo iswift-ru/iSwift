@@ -147,8 +147,8 @@ body: new FirebaseAnimatedList(
       ),
 ```
 
-### Updating Data
-To update data, you can use the **update(key, value)** method by passing the new value. 
+### Обновление данных
+Для обновления данных **update(key, value)** используется метод передачи нового значения.
 
 **Updating data**
 
@@ -164,8 +164,8 @@ void updateUser(User user) async {
     });
   }
 ```  
-### Deleting Data
-To delete data, you can simply call remove() method on to database reference. 
+### Удаление дынных
+Для удаления данных, вы можете просто вызвать метод remove() в базе данных по ссылке.
 
 **delete**
 
@@ -176,7 +176,7 @@ To delete data, you can simply call remove() method on to database reference.
     });
   }
 ```
-Now we have enough knowledge to get started with a Flutter application. Let’s create one and see how to integrate the realtime database with an example app. Below are the steps you need to follow to set up your project for using Firebase realtime database. 
+Теперь вы имеете достаточно знаний для начала работы с Флаттер приложением. Давайте создадим его и посмотрим, как интегрировать базу данных в реальном времени с примером приложением. Ниже приведены шаги, которые необходимо выполнить чтобы запутить наш проект используя Firebase realtime database.
 
 ### Creating a new Project
 1. Create a new project from File ⇒ New Flutter Project with your development IDE.
