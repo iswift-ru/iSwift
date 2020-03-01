@@ -93,8 +93,8 @@ FirebaseDatabase database = new FirebaseDatabase();
 DatabaseReference _userRef;=database.reference().child('user');   
 ```
 
-### Inserting Data
-To insert data, you can use set(key, value) method on to database reference path. This will create the value on the path provided to a given reference. As you can see below, we inserting a user information to user reference node. 
+### Вставка данных
+Для вставки данных вы должны использовать метод отправки (ключ, значение) указывая путь в базе данных. Это создаст значение в указанном месте. Как вы можете видеть ниже, мы вставили информацию о пользователе в узел пользователя.
 
 **Add a node in Database**
 ```
@@ -124,8 +124,8 @@ addUser(User user) async {
   }
 ```
 
-### Reading Data
-To read the data, we can use FirebaseAnimatedList widget of Firebase database plugin. In which, we pass the root reference of a node in the query parameter. This event will be triggered whenever there is a change in data in realtime. As you can see below, as each parameter define its feature. In the itemBuilder parameter, we'll get the actual value of an item.
+### Чтение данных
+Прочитать данные вы можете используя FirebaseAnimatedList виджет плагина от базы данных Firebase.  В котором мы передаём главную ссылку на узел в параметре запроса. Это событие будет вызываться каждый раз когда будут изменены данные в реальном времени.  Как вы можете видеть ниже каждый параметр определяет свой элемент. В itemBuilder параметре вы будите получать актуальное значение элемента.
 
 **FirebaseAnimatedList**
 
