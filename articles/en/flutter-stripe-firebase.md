@@ -24,3 +24,5 @@ If necessary, add stripe in package.json
 ```import 'package:stripe_payment/stripe_payment.dart';
 StripeSource.setPublishableKey("pk_test");```
 **The publishable key is the Publishable key from the API keys (Stripe)….**
+![API keys (Stripe)](https://iswift.ru/images/1_ujzs7Q_h-RJ3LZc7CcNsNA.png)
+
