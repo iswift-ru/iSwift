@@ -23,13 +23,15 @@ If necessary, add stripe in package.json
 5. From flutter side, you need the package stripe_payment
 
 ```import 'package:stripe_payment/stripe_payment.dart';
-StripeSource.setPublishableKey("pk_test");```
+StripeSource.setPublishableKey("pk_test");
+```
 
 **The publishable key is the Publishable key from the API keys (Stripe)….**
 ![API keys Stripe](https://iswift.ru/images/1_ujzs7Q_h-RJ3LZc7CcNsNA.png "API keys Stripe")
 
 In the cloud function side, you need only this :
 > const stripe = require(‘stripe’)(functions.config().stripe.token);
+
 **Next…**
 For starting communication with Stripe, **you need to have a token…**(which Stripe recommends to generate from the Client side using its libraries)…
 In our case, flutter package handles it internally (**when we add card**)…
