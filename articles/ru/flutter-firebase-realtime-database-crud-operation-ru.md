@@ -179,10 +179,10 @@ void updateUser(User user) async {
 Теперь вы имеете достаточно знаний для начала работы с Флаттер приложением. Давайте создадим его и посмотрим, как интегрировать базу данных в реальном времени с примером приложением. Ниже приведены шаги, которые необходимо выполнить чтобы запутить наш проект используя Firebase realtime database.
 
 ### Создаём новый проект
-1. Создаём новый проект в вашей среде разработки IDE, File ⇒ New Flutter Project.
-2. Теперь настроим ваше приложение с облаком Firebase. Как объяснено здесь.
-3. Откройте pubspec.yaml файл и добавьте зависимость firebase_database: ^1.0.5 
-4. Откройте файл main.dart и отредактируйте его. Мы задали свою тему и удалили вывеску дебаг в правом верхнем углу приложения (приложение в разработке).
+№1. Создаём новый проект в вашей среде разработки IDE, File ⇒ New Flutter Project.
+№2. Теперь настроим ваше приложение с облаком Firebase. Как объяснено здесь.
+№3. Откройте pubspec.yaml файл и добавьте зависимость firebase_database: ^1.0.5 
+№4. Откройте файл main.dart и отредактируйте его. Мы задали свою тему и удалили вывеску дебаг в правом верхнем углу приложения (приложение в разработке).
 
 **main.dart**
 
@@ -210,7 +210,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-5. After that create a user.dart file. It is a POJO model that'll contain user information. После этого создайте файл user.dart. Это POJO макет, который будет содержать информацию о пользователе. 
+№5. After that create a user.dart file. It is a POJO model that'll contain user information. После этого создайте файл user.dart. Это POJO макет, который будет содержать информацию о пользователе. 
 
 **user.dart**
 
@@ -247,7 +247,7 @@ class User {
 }
 ```
 
-6. Для простоты, я создал отдельный файл firebase_database_util.dart. Здесь я записал все CRUD методы, который мы будем использовать для взаимодействия с базой данных Firebase. Перед вызовом любого метода этого util. Для инициализации мы вызываем метод initState.
+№6. Для простоты, я создал отдельный файл firebase_database_util.dart. Здесь я записал все CRUD методы, который мы будем использовать для взаимодействия с базой данных Firebase. Перед вызовом любого метода этого util. Для инициализации мы вызываем метод initState.
 
 **firebase_database_util.dart**
 
@@ -356,7 +356,7 @@ class FirebaseDatabaseUtil {
 }
 ```
 
-7. Теперь начнём разработку пользовательского интерфейса. Для вывода на экран списка пользователей создадим другой файл user_dashboard.dart. Для лучшего понимания я закоментировал сноски в документе. Поэтому, читатйте внимательно, для лучшего понимания в следующем виджете.
+№7. Теперь начнём разработку пользовательского интерфейса. Для вывода на экран списка пользователей создадим другой файл user_dashboard.dart. Для лучшего понимания я закоментировал сноски в документе. Поэтому, читатйте внимательно, для лучшего понимания в следующем виджете.
 
 **user_dashboard.dart**
 
@@ -563,11 +563,11 @@ class _MyHomePageState extends State<UserDashboard> implements AddUserCallback {
 }
 ```
 
-The output of the above widget looks like below when you'll run this project.
+Когда вы запустите проект, выведуться данные, как указано ниже на фотографии.
 
 ![flutter firebase database list](https://iswift.ru/images/flutter_firebase_database_list.png "flutter firebase database list")
 
-8. Let's see final code snippet of this project. We are going to create a pop-up widget. It will show user info entry fields. When we add and update user info.
+8. Let's see final code snippet of this project. We are going to create a pop-up widget. Посмотрите финальную отрывок кода этого проекта. В нем отображаются поля ввода информации о пользователе. При добавлении и обновлении сведений о пользователе.
 
 **add_user_dialog.dart**
 
@@ -683,7 +683,7 @@ abstract class AddUserCallback {
 }
 ```
 
-The final output of the above widget looks like below.
+Окончательные выходные данные вышеуказанного виджета выглядят так, как показано ниже в ссылках.
 
 ![flutter firebase database popup](https://iswift.ru/images/firebase_database_entery_popup.png "flutter firebase database popup")
 
