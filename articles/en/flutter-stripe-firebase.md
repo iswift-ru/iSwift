@@ -21,8 +21,10 @@ This token, you’ll get from Step 2…
 If necessary, add stripe in package.json
 4. For the list of apis provided by Stripe, refer the link.
 5. From flutter side, you need the package stripe_payment
+
 ```import 'package:stripe_payment/stripe_payment.dart';
 StripeSource.setPublishableKey("pk_test");```
+
 **The publishable key is the Publishable key from the API keys (Stripe)….**
 ![API keys Stripe](https://iswift.ru/images/1_ujzs7Q_h-RJ3LZc7CcNsNA.png "API keys Stripe")
 
@@ -34,9 +36,11 @@ In our case, flutter package handles it internally (**when we add card**)…
 
 ![ADD a card](https://iswift.ru/images/1_9qSmfi5TyqN5VPhjTXr4yQ.png "Add a card")
 
-```StripeSource.addSource().then((String token) {
+```
+StripeSource.addSource().then((String token) {
     print(token); //your stripe card source token
-});```
+});
+```
 Here, you receive the token, which you need to pass / store for successive transactions with Stripe…
 **Stripe Call 1 :**
 > stripe.customers.createSource(customer, { source: token });
