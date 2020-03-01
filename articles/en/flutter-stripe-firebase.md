@@ -73,4 +73,21 @@ For more info on idempotency refer [link](https://stripe.com/docs/api/idempotent
 
 > stripe.charges.list({// limit: 3,customer: cust_id});
 
-![your payment](https://stripe.com/docs/api/idempotent_requests?lang=node)
+![Flutter + Stripe + Firebase— All charges..](https://iswift.ru/images/1_nxF4tIz6GAssV5227sKdQg.png "Flutter + Stripe + Firebase— All charges..")
+
+Returns a list of charges you’ve previously created. The charges are returned in sorted order, with the most recent charges appearing first.
+
+>where cust_id is the same as the one in Stripe call 1…..
+
+**Stripe Call 4 :**
+
+> stripe.refunds.create({ charge: chargeId });
+
+![Charge ID…](https://iswift.ru/images/1_E6lTz3d0zKSBWHtr4OL35Q.png)
+
+When you create a new refund, you must specify a charge on which to create it. The charge ID is the id which we received for transactions..
+## Finally…
+We did adding card, buying from the card, listing all our payments and refunded some transactions….**Phew…**
+
+Source code :
+https://github.com/AseemWangoo/flutter_programs/blob/master/Stripe_and_Flutter.zip
