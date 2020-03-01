@@ -57,3 +57,20 @@ where token : from above image , customer : your authenticated customer (we are 
 > stripe.charges.create(charge, { idempotency_key: idempotentKey });
 
 ![Flutter + Stripe + Firebase— Buy](https://iswift.ru/images/1_lhbywA30vmts6PcCgmiMjQ.png "Flutter + Stripe + Firebase— Buy")
+
+To charge a credit card or other payment source, you create a ```Charge``` object.
+
+**charge** = { amount, currency, customer, description };
+
+**If your API key is in test mode, the supplied payment source (e.g., card) won’t actually be charged**
+
+> The API supports idempotency for safely retrying requests without accidentally performing the same operation twice. For example, if a > request to create a charge fails due to a network connection error, you can retry the request with the same idempotency key to 
+> guarantee that only a single charge is created.
+
+For more info on idempotency refer [link](https://stripe.com/docs/api/idempotent_requests?lang=node).
+
+**Stripe Call 3 :**
+
+> stripe.charges.list({// limit: 3,customer: cust_id});
+
+![your payment](https://stripe.com/docs/api/idempotent_requests?lang=node)
