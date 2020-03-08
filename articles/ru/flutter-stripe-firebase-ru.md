@@ -1,26 +1,26 @@
-# Flutter + Stripe + Firebase
-*“Money” — real honey….*
+# Flutter + Stripe + Firebase делаем оплату банковской картой
+*“Деньги” — это настоящий мёд….*
 
 [![Youtube Flutter + Stripe + Firebase](https://iswift.ru/images/2020-03-01_20-29-23.png)](https://youtu.be/Ax4f0YPQpJ4)
->In this festive season, people often spend (be online / shopping etc). This gave me an idea, why not to try payments using Flutter.
+>В этот праздничный период, люди много тратяться (в интернете / или в магазинах). Это натолкнуло меня на мысль, а почему бы не сделать оплату используя Flutter.
 
 ![Detail screen](https://iswift.ru/images/1_fjQfWoG-5iaFOcdg5F10Fw.png "Detail screen")
 
-## Begin…
-This article uses the [Stripe SDK](https://stripe.com/sg) and [Cloud Firestore](https://firebase.google.com/docs/firestore/quickstart) for storing the necessary payment information….
-For basic information related to Cloud Firestore, [please refer my previous article](http://flatteredwithflutter.com/firebase-firestore-and-flutter/).
+## Приступим…
+В этой статье используется [Stripe SDK](https://stripe.com/sg) и [Cloud Firestore](https://firebase.google.com/docs/firestore/quickstart) для хранения необходимой платёжной информации ….
+Для основной информации используется Cloud Firestore, [пожалуйста, ознакомьтесь с предыдущей статьёй](http://flatteredwithflutter.com/firebase-firestore-and-flutter/).
 
-## Things needed…
-1. Stripe account (obviously free)
-2. Once created go to Developer -> Api keys -> Reveal test key
-You need to set this key using the Firebase command…
-> firebase functions:config:set stripe.token=”Your token here"
-This token, you’ll get from Step 2…
-3. Add Stripe to the node modules, using
+## Что нам необходимо…
+1. Аккаунт в Stripe (естественно бесплатный)
+2. Как только создали переходим Developer -> Api keys -> Reveal test key
+Вы должны отправить этот ключ используя Firebase команду
+> firebase functions:config:set stripe.token=”Ваш токен здесь"
+Этот токен вы должны были получить во 2ом шаге…
+3. Добавьте Stripe в список модулей, используя
 > npm install stripe
-If necessary, add stripe in package.json
-4. For the list of apis provided by Stripe, refer the link.
-5. From flutter side, you need the package stripe_payment
+Если необходимо, добавьте stripe в package.json
+4. Для получения списка API предоставляющего Stripe, перейдите по [ссылке](https://stripe.com/docs/api/cards/create?lang=node).
+5. Flutter необходимо импортировать пакет [stripe_payment](https://pub.dartlang.org/packages/stripe_payment)
 
 ```import 'package:stripe_payment/stripe_payment.dart';
 StripeSource.setPublishableKey("pk_test");
