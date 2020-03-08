@@ -49,7 +49,7 @@ StripeSource.addSource().then((String token) {
 
 > stripe.customers.createSource(customer, { source: token });
 
-When you create a new card, you must specify a customer or recipient on which to create it.
+When you create a new card, you must specify a customer or recipient on which to create it. Когда вы создаёте новую карту, вы должны определить клиент или получатель
 **токен** : на картинке выше , **клиент** : вы индентифицировали покупателя (мы используем Firebase Auth by Google)
 
 **Stripe Call 2 :**
@@ -58,26 +58,28 @@ When you create a new card, you must specify a customer or recipient on which to
 
 ![Flutter + Stripe + Firebase— Buy](https://iswift.ru/images/1_lhbywA30vmts6PcCgmiMjQ.png "Flutter + Stripe + Firebase— Buy")
 
-To charge a credit card or other payment source, you create a ```Charge``` object.
+Оплата кредитной картой или другой платёжный способ, вы можете создать с помощью ```Charge``` объекта.
 
 **charge** = { amount, currency, customer, description };
 
-**If your API key is in test mode, the supplied payment source (e.g., card) won’t actually be charged**
+**Если ключ API находится в тестовом режиме, предоставленный источник платежа (например, карта) фактически не будет списано**
 
-> The API supports idempotency for safely retrying requests without accidentally performing the same operation twice. For example, if a > request to create a charge fails due to a network connection error, you can retry the request with the same idempotency key to 
-> guarantee that only a single charge is created.
 
-For more info on idempotency refer [link](https://stripe.com/docs/api/idempotent_requests?lang=node).
+> API поддерживают идемпотентность для безопасной обработку задублировавшихся запросов. Например, если
+>запрос на создание оплаты не выполнен из-за ошибки сетевого подключения, можно повторить запрос с тем же ключом идемпотентности и
+>гарантировано будет создание только одной оплаты.
+
+Больше информации об идемпотентности [ссылка](https://stripe.com/docs/api/idempotent_requests?lang=node).
 
 **Stripe Call 3 :**
 
 > stripe.charges.list({// limit: 3,customer: cust_id});
 
-![Flutter + Stripe + Firebase— All charges..](https://iswift.ru/images/1_nxF4tIz6GAssV5227sKdQg.png "Flutter + Stripe + Firebase— All charges..")
+![Flutter + Stripe + Firebase — Все оплаты..](https://iswift.ru/images/1_nxF4tIz6GAssV5227sKdQg.png "Flutter + Stripe + Firebase — Все оплаты..")
 
-Returns a list of charges you’ve previously created. The charges are returned in sorted order, with the most recent charges appearing first.
+Вернёмся к списку способов оплаты которые мы уже создали. Оплаты возвращаются в отсортированном порядке, при этом сначала появляются самые последние оплаты.
 
->where cust_id is the same as the one in Stripe call 1…..
+>где cust_id такой же как и в Stripe call 1…..
 
 **Stripe Call 4 :**
 
@@ -85,9 +87,10 @@ Returns a list of charges you’ve previously created. The charges are returned 
 
 ![Charge ID…](https://iswift.ru/images/1_E6lTz3d0zKSBWHtr4OL35Q.png)
 
-When you create a new refund, you must specify a charge on which to create it. The charge ID is the id which we received for transactions..
-## Finally…
-We did adding card, buying from the card, listing all our payments and refunded some transactions….**Phew…**
+При создании нового возврата необходимо указать сумму, на которую оно будет создано. Идентификатор платежа - это идентификатор, полученный для транзакций.
+## Финал…
+Мы добавили карту, оплатили с карты, перечислили способы оплаты и осуществили возврат денежных средств по транзакции….**Phew…**
 
-Source code :
+
+Исходный код:
 https://github.com/AseemWangoo/flutter_programs/blob/master/Stripe_and_Flutter.zip
