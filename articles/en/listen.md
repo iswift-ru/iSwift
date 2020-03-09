@@ -3,3 +3,4 @@
 ## 2. [Flutter : How to do user login with Firebase](flutter-how-to-do-user-login-with-firebase)
 ## 3. [Flutter - Firebase Realtime Database CRUD Operation](flutter-firebase-realtime-database-crud-operation)
 ## 4. [Flutter + Stripe + Firebase](flutter-stripe-firebase)
+## 5. [Flutter Chat using Firebase Realtime Database](flutter-chat-using-firebase-realtime-database)
