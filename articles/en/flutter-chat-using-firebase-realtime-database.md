@@ -1,4 +1,5 @@
 # Flutter Chat using Firebase Realtime Database
+![flutter firebase database tutorial](https://iswift.ru/picture/flutter-firebase-database-tutorial.jpg)
 Let’s explore firebase realtime database by creating a simple chat app. where any one can post message publically
 
 ## Step 1: Configure Firebase & Flutter
