@@ -18,7 +18,8 @@ dependencies:
   intl: ^0.15.8
   ```
   
- ## Step 3: Working with Code
+## Step 3: Working with Code
+ 
 Now we can start writing code with our ```main.dart```
 
 Let’s create a db reference ```chat``` to store our messages. & ```_txtCtrl``` for handling user inputs
