@@ -20,12 +20,14 @@ dependencies:
   intl: ^0.15.8
   ```
   
-## Step 3: Working with Code
+## Шаг 3: Работаем с кодом
  
-Now we can start writing code with our ```main.dart```
+Сейчас мы можем начать писать код в нашем файле ```main.dart```
 
-Let’s create a db reference ```chat``` to store our messages. & ```_txtCtrl``` for handling user inputs
-INSERT DATA TO FIREBASE REALTIME DATABASE
+Теперь создадим базу данных ссылок ```chat``` для хранения наших сообщений. И ```_txtCtrl``` для обработки входных данных пользователя
+
+ВСТАВКА ДАННЫХ В FIREBASE REALTIME БАЗУ ДАННЫХ
+
 ```sendMessage() {
     _firebaseRef.push().set({
         "message": _txtCtrl.text,
@@ -34,9 +36,9 @@ INSERT DATA TO FIREBASE REALTIME DATABASE
 }
 ```
 
-this code can insert(push) data into firebase
+этот код мозволяет отправлять данные в Firebase
 
-DELETE DATA TO FIREBASE REALTIME DATABASE
+УДАЛЕНИЕ ДАННЫХ ИЗ FIREBASE REALTIME БАЗЫ ДАННЫХ
 
 ```
 deleteMessage(key) {
@@ -44,9 +46,9 @@ deleteMessage(key) {
 }
 ```
 
-Using this code, we delete child with key
+Используя этот код, мы удаляем ребёнка с ключём
 
-UPDATE DATA TO FIREBASE REALTIME DATABASE
+ОБНОВЛЕНИЕ ДАННЫХ В FIREBASE REALTIME БАЗЕ ДАННЫХ
 ```
 updateTimeStamp(key) {
     _firebaseRef
@@ -55,10 +57,12 @@ updateTimeStamp(key) {
 }
 ```
 
-Using this code, we’re updating timestamp of particular message based on key
 
-READ DATA FROM FIREBASE REALTIME DATABASE
-To display firebase data into our app, we need ```StreamBuilder.```
+Используя этот коды, мы обновляем метку времени определённого сообщения на основе ключа
+
+ЧТЕНИЕ ДАННЫХ ИЗ FIREBASE REALTIME БАЗЫ ДАННЫХ
+Для вывода содержимого Firebase в наше приложение, нам потребуется ```StreamBuilder.```
+
 
 ```
 StreamBuilder(
@@ -95,24 +99,25 @@ StreamBuilder(
 )
 ```
 
-**Explanation:**
+**Объяснение:**
 
-* We created StreamBuilder based on _firebaseRef.onValue, which means, we update stream builder whenever data changes on firebase (CRUD)
-* If there is an error with data or null, we display Text Widget with “No data”
-* If there is no error, we’re storing all messages (snap.data.snapshot.value) into Map data
-* Since firebase key are unpredictable, we have used forEach to push data into item
+* Мы создали StreamBuilder основываясь на _firebaseRef.onValue, что означает, мы обновим  stream builder каждый раз как только поменяются данные в firebase (CRUD Запись, чтение, обновление, удаление)
 
-Before
+* При наличии ошибки с данными или их нет, на экран выведится виджет “No data”
+* Если ошибки нет, мы сохраним все сообщения (snap.data.snapshot.value) в Map (карту) данных
+* Так как firebase ключи непредсказуемые, мы использовали forEach для отправки данных в элемент
+
+До
 ```
  {-Lk30mSI-ObTUuy730c4: {message: gbrjv dl, timestamp: 1563435680036}, -Lk30mXd97oFihH_5MVR: {message: gbrjv dl, timestamp: 1563435679414}, -Lk30izl-cQ7IdtKeo4i: {message: ghrhr, timestamp: 1563435678204}}
  ```
- After
+ После
  ```
  [{key: -Lk30mSI-ObTUuy730c4, message: gbrjv dl, timestamp: 1563435680036}, {key: -Lk30mXd97oFihH_5MVR, message: gbrjv dl, timestamp: 1563435679414}, {key: -Lk30izl-cQ7IdtKeo4i, message: ghrhr, timestamp: 1563435678204}]
  ```
-* Once everything is fine, we use ListView.builder() & ListTile for displaying data
-* When user Tap, we update timestamp & with longpress, we delete data
-This code we display a TextField with Buttons
+* Чтобы всё выводилось хорошо мы использовали ListView.builder() и ListTile
+* Когда пользователь Нажимает кнопку, мы обновляем метку времени а при длительном нажатии мы удаляем данные 
+Этот код выводит TextField и Buttons
 
 ```
 Container( child: Row(children: <Widget>[
