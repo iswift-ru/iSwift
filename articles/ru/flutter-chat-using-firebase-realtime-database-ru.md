@@ -1,13 +1,14 @@
 # Создаём чат на Flutter используя базу данных Firebase Realtime
 
 ![flutter firebase database tutorial](https://iswift.ru/images/flutter-firebase-database-tutorial.jpg)
-Let’s explore firebase realtime database by creating a simple chat app. where any one can post message publically
 
-## Step 1: Configure Firebase & Flutter
-Before starting this, You must complete: [Firebase Flutter Setup](https://flutterowl.com/flutter-firebase-setup)
+Давайте создадим простое приложение с чатом используя базу данных Firebase Realtime. В котором кто то может опубликовать сообщения
 
-## Step 2 : Adding Dependencies
-Once you have completed setup. now we can add required packages with your ```pubspec.yaml```. In our case we need to add realtime database (```firebase_database```), ```intl``` (for timestamp handling)
+## Шаг 1: Конфигурация Firebase и Flutter
+Для начала вы должны завершить: [Firebase Flutter установка](https://flutterowl.com/flutter-firebase-setup)
+
+## Шаг 2 : Добавление зависимостей
+После завершения установки. Теперь нам необходимо добавить нужный пакет в ```pubspec.yaml```. В нашем слeчае, необходимо добавить Realtime Database(```firebase_database```), ```intl``` (для обработки меток времени)
 
 ```
 dependencies:
