@@ -4,3 +4,5 @@
 ## 3. [Flutter - Firebase Realtime Database CRUD Operation](flutter-firebase-realtime-database-crud-operation)
 ## 4. [Flutter + Stripe + Firebase](flutter-stripe-firebase)
 ## 5. [Flutter Chat using Firebase Realtime Database](flutter-chat-using-firebase-realtime-database)
+## 6. [Build a note-taking app with Flutter + Firebase — Part I](build-a-note-taking-app-with-flutter-firebase-part-1)
+
