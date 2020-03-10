@@ -122,7 +122,9 @@ If everything goes fine, you should now be able to see the first note in your se
 Flutter Keep screenshot
 
 We’re doing well so far. We’ve built a simple reactive-styled app by using the ```provider``` package, and also learned how to use the Firebase toolkits.
+
 However, the app is less than useful without a note editor. We’ll add more functionalities to it in the next parts of the series.
+
 Thank you for reading! 🙌
 
 WRITTEN BY Yingxin Wu
