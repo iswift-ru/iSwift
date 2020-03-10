@@ -4,4 +4,6 @@
 # 3. [Flutter - Firebase Realtime действия с базой данных](flutter-firebase-realtime-database-crud-operation-ru)
 # 4. [Flutter + Stripe + Firebase делаем оплату банковской картой](flutter-stripe-firebase-ru)
 # 5. [Создаём чат на Flutter используя базу данных Firebase Realtime](flutter-chat-using-firebase-realtime-database-ru)
+# 6. [Делаем блокнот с заметками на Flutter и Firebase часть 1](build-a-note-taking-app-with-flutter-firebase-part-1-ru)
+
 
