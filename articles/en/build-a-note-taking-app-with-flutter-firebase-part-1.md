@@ -71,3 +71,21 @@ current_user.dart
 I use Google Sign-in as an example because it’s easy to integrate. In fact, it is just one of the many services supported by Firebase Auth. You can enable what you need in the Firebase console.
 ![Available authentication providers](https://iswift.ru/images/1_p28rWu_gssWRU4xwb5NTQg.png)
 Available authentication providers
+
+**The code snippet to authenticate using Google Sign-In:**
+
+<script src="https://gist.github.com/xinthink/3c2e2a93b54871ba72a4235ccf2f0554.js"></script>
+login_screen.dart
+
+Just ask for a Google Sign-In credential, and then use it to authenticate with Firebase.
+You can see that there’s nothing to do after the authentication finished successfully. In this situation, the ```FirebaseAuth.onAuthStateChanged``` stream emits a ‘Signed-in’ event, which triggers a re-build of the root gatekeeper widget so that the ```HomeScreen``` is rendered.
+The above is an example of [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming): just mutate the state, the listeners who concern about the state will do the remaining jobs.
+Back to the project, before testing your login screen, please make sure you’re not ignoring the following settings:
+* For the Android platform, you must [specify the SHA-1 fingerprint](https://firebase.google.com/docs/auth/android/google-signin#before_you_begin) in the Firebase console
+* For the iOS platform, you have to [add a custom URL scheme](https://firebase.google.com/docs/auth/ios/google-signin#2_implement_google_sign-in) to the Xcode project
+* For the Web platform, add a meta tag like ```<meta name="google-signin-client_id" content="{web_client_id}">``` to ```web/index.html```, you can find the Web client id in the ‘OAuth 2.0 Client IDs’ section of your project’s [credentials page](https://console.cloud.google.com/apis/credentials) in the Google Cloud console
+
+**Querying notes**
+
+With an authenticated user, we can now enter the main screen of the app, the note list.
+But how can you add the first note without a note editor? You can do this with the Firebase Console:
