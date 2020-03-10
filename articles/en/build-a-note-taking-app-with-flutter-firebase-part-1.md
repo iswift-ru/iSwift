@@ -85,7 +85,44 @@ Back to the project, before testing your login screen, please make sure you’re
 * For the iOS platform, you have to [add a custom URL scheme](https://firebase.google.com/docs/auth/ios/google-signin#2_implement_google_sign-in) to the Xcode project
 * For the Web platform, add a meta tag like ```<meta name="google-signin-client_id" content="{web_client_id}">``` to ```web/index.html```, you can find the Web client id in the ‘OAuth 2.0 Client IDs’ section of your project’s [credentials page](https://console.cloud.google.com/apis/credentials) in the Google Cloud console
 
-**Querying notes**
+## Querying notes
 
 With an authenticated user, we can now enter the main screen of the app, the note list.
 But how can you add the first note without a note editor? You can do this with the Firebase Console:
+
+![Firestore console](https://iswift.ru/images/1_JA5qv8JPFfjNA9zAQ3Nhcg.png)
+Firestore console
+
+Please name the collection as ```notes-{user_id}```, and you can find your user id in the *Authentication* page of the Firebase Console.
+To reinforce privacy security, you may also want to set access rules against the dataset, making sure that users can only see & edit their own notes.
+
+![Firestore data access rules](https://iswift.ru/images/1_8bNXjjHd9lQqAE-BKtPEsQ.png)
+Firestore data access rules
+
+Before we can retrieve notes from Firestore, we need a model that represents an individual note, and functions to transform between the Firestore model and our own.
+
+<script src="https://gist.github.com/xinthink/209fa3e9e37de1d9ae098101c12e2e5d.js"></script>
+
+Again we’re going to use a ```StreamProvider``` in the ```HomeScreen```, which watches the notes query result, so that any changes happen to the backend reflect here instantly. The Firestore SDK also delivers the [offline capabilities](https://firebase.google.com/docs/firestore/manage-data/enable-offline) we need, we don’t have to change the code used to access the data.
+And thanks for the gatekeeper widget we built previously, which enables us to retrieve the authentication info any time via ```Provider.of<CurrentUser>.```
+
+<script src="https://gist.github.com/xinthink/4e04f2a3ecb3b5097fe0912fca898337.js"></script>
+home_screen.dart
+
+The code is a little bit verbose, for I provide here a floating ```AppBar``` looks like the one in Google Keep.
+For ```NotesGrid``` and ```NotesList```, they are much similar: just kind of a wrapper of a ```SliverGrid``` and a ```SliverList``` respectively.
+
+<script src="https://gist.github.com/xinthink/e972c4944bf197e60c98e19125f395bc.js"></script>
+notes_grid.dart
+
+I’m not posting all the detailed code here. Please find the full example in my [GitHub repo](https://github.com/xinthink/flutter-keep).
+If everything goes fine, you should now be able to see the first note in your self-made ***Flutter Keep*** app!
+
+![Flutter Keep screenshot](https://iswift.ru/images/1_kov0KSVUbhuqVP3pCoebRw.png)
+Flutter Keep screenshot
+
+We’re doing well so far. We’ve built a simple reactive-styled app by using the ```provider``` package, and also learned how to use the Firebase toolkits.
+However, the app is less than useful without a note editor. We’ll add more functionalities to it in the next parts of the series.
+Thank you for reading! 🙌
+
+WRITTEN BY Yingxin Wu
