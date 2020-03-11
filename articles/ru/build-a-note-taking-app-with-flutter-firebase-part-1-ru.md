@@ -15,9 +15,10 @@
 
 Итак, приступим.
 
-Before creating the project, you may want to enable web support via the command: ```flutter config -- enable-web```, if you want the app to be able to run on Web besides Android and iOS.
-Now, execute the command: ```flutter create flt_keep``` to create the Flutter Keep app, ```flt_keep``` is the package name that will be used in the import statements.
-For those who are new to Flutter, please follow the [Get started guide](https://flutter.dev/docs/get-started/install) to install the SDK, and get familiar with the project structure.
+После создания проекта вы можете включить web поддержку с помощью команды: ```flutter config -- enable-web```, если вы хотите приложение, которое бы запускалось в Web помимо Android и iOS.  
+Сейчас, выполните команду: ```flutter create flt_keep``` для создания Flutter Keep app, ```flt_keep``` это имя пакета, которое будет использовано при импорте
+
+Те кто новички во Flutter, перейдите по ссылке [Get started guide](https://flutter.dev/docs/get-started/install) для установки SDK, и ознакомьтесь со структурой проекта.
 
 ## Data structure
 
