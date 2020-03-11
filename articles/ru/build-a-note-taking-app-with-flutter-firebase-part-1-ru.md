@@ -9,10 +9,11 @@
 
 [![Flutter Keep](https://iswift.ru/images/2020-03-09_22-11-25.png)](https://youtu.be/GXNXodzgbcM)
 
-I’m going to introduce the process in a series of articles. Key components will be added to the app during iterations, to make it easier to understand.
-In this first part of the series, we’re going to set up the Flutter project, provide an authentication process, and a simple screen to show the note list.
+Я представлю этот процесс разработки в серии статей. Ключевые компоненты будут добавлены в приложение в несколько циклов, это сделано для более лёгкого восприятия.
 
-Let’s get started.
+В первой части мы создадим Flutter проект, реализуем процесс аутенфикации и простой экран для показа списка записей.
+
+Итак, приступим.
 
 Before creating the project, you may want to enable web support via the command: ```flutter config -- enable-web```, if you want the app to be able to run on Web besides Android and iOS.
 Now, execute the command: ```flutter create flt_keep``` to create the Flutter Keep app, ```flt_keep``` is the package name that will be used in the import statements.
