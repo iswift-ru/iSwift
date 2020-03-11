@@ -20,13 +20,16 @@
 
 Те кто новички во Flutter, перейдите по ссылке [Get started guide](https://flutter.dev/docs/get-started/install) для установки SDK, и ознакомьтесь со структурой проекта.
 
-## Data structure
+## Структура
 
-For a notebook app, the first thing to consider is how the notes should be persisted and queried.
-What I concern includes:
-* First, the privacy. Notes of different accounts should be separated from each other.
-* Second, the app ought to work offline. Users should be able to take notes under any network condition. It is the app’s responsibility to sync the data when network connectivity recovers.
-My choice is [Cloud Firestore](https://firebase.google.com/docs/firestore), mainly because of the experience I gained from previous projects, but also because it is straightforward to adapt.
+Для приложения "записная книжка" для начала надо определиться куда будут сохраняться и как будут вызываться записи.
+
+Вот, что меня волнует:
+
+* Первое. Конфидициальность. Записи других аккаунтов должны отделяться друг от друга.
+* Второе. Приложени должно работать в офлайн. Пользователи, могли бы делать записи не находясь в зоне покрытия интернет. В обязанности приложения входит синхронизация данных при восстановлении сетевого подключения.
+
+Мой выбор это [Cloud Firestore](https://firebase.google.com/docs/firestore), в основном потому что у меня был опыт использования в предыдущих приложениях а так же потмоу что он просто адаптируется.
 
 I decided to use a dedicated collection to store each user’s notes, one document for a single note. For the reasons:
 * Better segregation of each account’s data
