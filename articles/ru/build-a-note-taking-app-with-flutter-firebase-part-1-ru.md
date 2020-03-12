@@ -31,27 +31,36 @@
 
 Мой выбор это [Cloud Firestore](https://firebase.google.com/docs/firestore), в основном потому что у меня был опыт использования в предыдущих приложениях а так же потмоу что он просто адаптируется.
 
-I decided to use a dedicated collection to store each user’s notes, one document for a single note. For the reasons:
-* Better segregation of each account’s data
-* Easy to query
-* Avoids some [limitations](https://firebase.google.com/docs/firestore/quotas#limits) in reading & writing data
+Я решил использовать специальную коллекцию для хранения всех записей пользователей, одна заметка в одном документе.
+Причины:
+* Лучшая сегригация между данными аккаунтов.
+* Легче делать запросы
+* Постараться не выходить за [лимиты](https://firebase.google.com/docs/firestore/quotas#limits) на запись и чтение данных
 
-This approach also comes with a cost, but it is acceptable for a demonstration purpose. That is, I have to create indexes for each collection dynamically, I’ll discuss the issue in a later article.
+Такой подход также сопровождается затратами, но он приемлем для демонстрационных целей. Т.е. я создам днамические индексы  для каждой коллекции, я обговорю эту проблему в следующем статье.
 
-For now, the data structure is like:
+На данный момент структура данных выглядит следующим образом.
 ![Firestore data structure](https://iswift.ru/images/1_K11nEEwAPoEJnSexd22dRg.jpeg)
-Firestore data structure
+Firestore структура данных
 
-## App architecture
-Now it’s time to consider how to organize the app logic. It won’t worth it to apply a ‘real’ architecture to an app mostly for demonstration. But there’s still a need to manage states across multiple screens in the app.
-In this case, we’re going to use the [provider](https://pub.dev/packages/provider) package to manage the app state. It allows us to write code in a reactive (or data-driven) style.
-The most important screens in the app include:
-* The authentication screen, watching the signed-in state, makes sure that only authenticated users can take notes
-* The note list screen, displaying the most recent state of the notes, should react to changes to any note
-* The note editor should also be reactive to outside modifications of the particular note being edited
+## Архитектура приложения
+
+Сейчас время рассмотреть как организовать логику в приложении. Не стоит применять "настоящую" архитектуру, данный пример структуры приложения для демонстрации. Но по-прежнему необходимо управлять состояниями на нескольких экранах приложения.
+
+В нашем случаем, мы будем использовать пакет [provider](https://pub.dev/packages/provider) для управления состоянием приложения.  Это позволит нам писать код в стиле reactive (или data-driven) 
+
+Наиболее важные экраны приложения:
+
+* Экран авторизации, показывает состояние входа в систему, гарантирует, что только аутентифицированные пользователи могут делать заметки
+* Экран со списком заметок, показывает последнее состояние заметок, должен реагировать на изменения в заметке.
+* Редактор заметок также должен реагировать на внешние изменения редактируемой заметки.
+
 Via providers, we can fulfill the above requirements easier, with a cleaner codebase.
-With the scheme in mind, let’s begin writing the code.
-To use ```provider``` and the Firebase SDKs, we have to add the dependencies to the ```pubspec.yaml``` file:
+С помощью Provider мы можем выполнять указанные выше требования с чистой кодовой базой.
+
+С учётом схемы, начнём писать код.
+
+Что бы использовать ```provider``` и Firebase SDKs, мы должны добавить зависимости в файл ```pubspec.yaml```:
 
 ```
 provider: ^4.0.2
