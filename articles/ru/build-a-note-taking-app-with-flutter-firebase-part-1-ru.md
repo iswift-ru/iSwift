@@ -69,21 +69,25 @@ firebase_auth: ^0.15.4
 cloud_firestore: ^0.13.3
 google_sign_in: ^4.1.4
 ```
-Please follow the [detailed instructions](https://firebase.google.com/docs/flutter/setup) to integrate Firebase SDKs for both Android and iOS, also the [Web platform](https://firebase.google.com/docs/web/setup).
-Entry of the app
-Remember that we have to reject unauthenticated users, let’s build a gatekeeper widget to the root.
+Пожалуйста перейдите по ссылке [Детальные инструкции](https://firebase.google.com/docs/flutter/setup) для интеграции Firebase SDKs с  Android и iOS, а так же с [Web платформой](https://firebase.google.com/docs/web/setup).
+
+Войдите в приложение
+Помните, что мы должны отклонить неавторизованных пользователей, давайте сделаем корневой виджет.
+
 
 <script src="https://gist.github.com/xinthink/7d1ad8cc4421f50266d3406342430c10.js"></script>
 main.dart
 
-The ```StreamProvider/Consumer``` pair here is to watch the ```onAuthStateChanged```, a stream of Firebase authentication events, whenever the signed-in state has changed, the ```Consumer``` will get notified and re-build the widget according to the current state.
-A little trick here is to use a ```CusttentUser``` to wrap the ```FirebaseUser```, to distinguish the default initial and the unauthenticated state, both of which are ```null```.
+```StreamProvider/Consumer``` здесь чтобы следить за ```onAuthStateChanged```, потоком событий авторизаций в Firebase, каждый раз когда меняется статус авторизации, ```Consumer``` будет принимать событие и перестраивать виджет согласно настоящего статуса.
+
+Небольшая хитрость в том чтобы использовать ```CusttentUser``` переносить ```FirebaseUser```, чтобы различать начальное и неавторизованное состояния по умолчанию, оба из которых имеют значение ```null```.
+
 
 <script src="https://gist.github.com/xinthink/9d0853544425791c1aee55eb78900b72.js"></script>
 current_user.dart
 
-## Google Sign-in & Firebase Auth
-I use Google Sign-in as an example because it’s easy to integrate. In fact, it is just one of the many services supported by Firebase Auth. You can enable what you need in the Firebase console.
+## Google вход и Firebase авторизация
+Я использую Google вход в примере, потмоу что его легко интегрировать. По сути, это всего лишь один из многочисленных сервисов, поддерживаемых Firebase авторизация. Вы можете включить что вам надо в Firebase консоли.
 ![Available authentication providers](https://iswift.ru/images/1_p28rWu_gssWRU4xwb5NTQg.png)
 Available authentication providers
 
