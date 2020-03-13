@@ -55,7 +55,8 @@ cloud_firestore: ^0.13.3
 google_sign_in: ^4.1.4
 ```
 Please follow the [detailed instructions](https://firebase.google.com/docs/flutter/setup) to integrate Firebase SDKs for both Android and iOS, also the [Web platform](https://firebase.google.com/docs/web/setup).
-Entry of the app
+
+## Entry of the app
 Remember that we have to reject unauthenticated users, let’s build a gatekeeper widget to the root.
 
 <script src="https://gist.github.com/xinthink/7d1ad8cc4421f50266d3406342430c10.js"></script>
