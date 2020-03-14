@@ -127,28 +127,32 @@ Firestore data access rules
 
 <script src="https://gist.github.com/xinthink/209fa3e9e37de1d9ae098101c12e2e5d.js"></script>
 
-Again we’re going to use a ```StreamProvider``` in the ```HomeScreen```, which watches the notes query result, so that any changes happen to the backend reflect here instantly. The Firestore SDK also delivers the [offline capabilities](https://firebase.google.com/docs/firestore/manage-data/enable-offline) we need, we don’t have to change the code used to access the data.
-And thanks for the gatekeeper widget we built previously, which enables us to retrieve the authentication info any time via ```Provider.of<CurrentUser>.```
+Мы снова должны использовать ```StreamProvider``` в ```HomeScreen```, который отслеживает результат запроса заметок так, чтобы любые изменения, происходящие с бэкэндом, отражались мгновенно. Firestore SDK так же обеспечивает [offline capabilities](https://firebase.google.com/docs/firestore/manage-data/enable-offline) Мы не должны изменять код, используемый для доступа к данным.
+
+И благодаря корневому виджету созданного ранее, позволяет нам получить информацию об аутенфикации в любое время с
+с помощью```Provider.of<CurrentUser>.```
 
 <script src="https://gist.github.com/xinthink/4e04f2a3ecb3b5097fe0912fca898337.js"></script>
 home_screen.dart
 
-The code is a little bit verbose, for I provide here a floating ```AppBar``` looks like the one in Google Keep.
-For ```NotesGrid``` and ```NotesList```, they are much similar: just kind of a wrapper of a ```SliverGrid``` and a ```SliverList``` respectively.
+Немного подробный код, как я сделаю плавающий ```AppBar``` похожий на то что в Google Keep.
+
+Для ```NotesGrid``` и ```NotesList```, они очень похожи: просто обертка ```SliverGrid``` и ```SliverList``` соответственно.
 
 <script src="https://gist.github.com/xinthink/e972c4944bf197e60c98e19125f395bc.js"></script>
 notes_grid.dart
 
-I’m not posting all the detailed code here. Please find the full example in my [GitHub repo](https://github.com/xinthink/flutter-keep).
-If everything goes fine, you should now be able to see the first note in your self-made ***Flutter Keep*** app!
+Я не запостил весь код детально здесь. Пожалуйста, найдите полный пример в [GitHub репозитории](https://github.com/xinthink/flutter-keep).
+Если всё было сделано правильно, вы можете увидеть первую заметку в вашем самодельном ***Flutter Keep*** приложении!
+
 
 ![Flutter Keep screenshot](https://iswift.ru/images/1_kov0KSVUbhuqVP3pCoebRw.png)
 Flutter Keep screenshot
 
-We’re doing well so far. We’ve built a simple reactive-styled app by using the ```provider``` package, and also learned how to use the Firebase toolkits.
+У нас пока всё хорошо. Мы делаем простое реактивное приложение используя пакет ```provider```, а так же учимся как использовать инструменты Firebase.
 
-However, the app is less than useful without a note editor. We’ll add more functionalities to it in the next parts of the series.
+Однако приложение бесполезное не имея редактора заметок. Мы добавим больше функциональности в следующей части 2
 
-Thank you for reading! 🙌
+Tспасибо что читали! 🙌
 
-WRITTEN BY Yingxin Wu
+Автор Yingxin Wu
