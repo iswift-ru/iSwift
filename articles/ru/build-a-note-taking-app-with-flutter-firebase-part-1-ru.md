@@ -116,13 +116,14 @@ login_screen.dart
 ![Firestore console](https://iswift.ru/images/1_JA5qv8JPFfjNA9zAQ3Nhcg.png)
 Firestore console
 
-Please name the collection as ```notes-{user_id}```, and you can find your user id in the *Authentication* page of the Firebase Console.
-To reinforce privacy security, you may also want to set access rules against the dataset, making sure that users can only see & edit their own notes.
+Присвойте коллекции имя ```notes-{user_id}```, и вы сможете найти вашего пользователя на странице *Authentication* в Firebase консоли.
+
+Для повышения безопасности конфиденциальности также может потребоваться установить правила доступа к набору данных, чтобы пользователи могли просматривать и редактировать только свои собственные заметки.
 
 ![Firestore data access rules](https://iswift.ru/images/1_8bNXjjHd9lQqAE-BKtPEsQ.png)
 Firestore data access rules
 
-Before we can retrieve notes from Firestore, we need a model that represents an individual note, and functions to transform between the Firestore model and our own.
+Прежде чем мы сможем извлечь заметки из Firestore, нам нужна модель, представляющая отдельную заметку, и функции для преобразования между моделью Firestore и нашей собственной.
 
 <script src="https://gist.github.com/xinthink/209fa3e9e37de1d9ae098101c12e2e5d.js"></script>
 
