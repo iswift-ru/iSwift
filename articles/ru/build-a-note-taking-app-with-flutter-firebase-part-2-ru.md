@@ -11,7 +11,7 @@
 В [Google Keep](https://www.google.com/keep), много типов записей, включая обычные текстовые заметки, аудио заметки, чеклисты с опцией прикрепления картинки. Однако в нашем примере мы сфокусируемся на обычном редакторе заметок, это будет проще.
 
 На картинке анонс того что мы будем делать:
-[Note editor preview](https://iswift.ru/images/1_MGIa1fUmmPk2K87fMC9DmA.jpeg)
+![Note editor preview](https://iswift.ru/images/1_MGIa1fUmmPk2K87fMC9DmA.jpeg)
 Note editor preview
 
 In essence, it composites of two text fields, one for the title, another for the plain-text content. Plus, a top ```AppBar``` and a ```ModalBottomSheet``` provides actions to update either the state or the color of the note.
