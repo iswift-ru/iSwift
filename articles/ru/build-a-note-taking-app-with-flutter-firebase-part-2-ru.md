@@ -1,14 +1,16 @@
-# Build a note-taking app with Flutter + Firebase — Part II
-Implements a plain-text editor with reversible actions & Hero transitions
+# Делаем блокнот с заметками на Flutter и Firebase (часть 2)
+Реализация текстового редактора с обратимыми действия и Hero переходов
 ![Implements a plain-text editor with reversible actions & Hero transitions](https://iswift.ru/images/1_gVY7JU07MLstpEzGwgYDFA.jpeg)
 
-Nice to have you in this second part of the series of ***Build a note-taking app with Flutter + Firebase***. If you haven’t read the previous article, please find it [here](https://medium.com/flutter-community/build-a-note-taking-app-with-flutter-firebase-part-i-53816e7a3788).
-In [part I](build-a-note-taking-app-with-flutter-firebase-part-1.md), we’ve built the first screen for the notebook app, **Flutter Keep**. In this article, we’re going to create a note editor with reversible operations supported, and explore the magical [Hero](https://flutter.dev/docs/development/ui/animations/hero-animations) animations.
+Рад видеть вас во второй части статьи ***Делаем блокнот с заметками на Flutter и Firebase***. Если вы не читали предыдущую статью, то вы можете найти её [здесь](https://iswift.ru/articles/ru/build-a-note-taking-app-with-flutter-firebase-part-1-ru).
+
+В [части 1](build-a-note-taking-app-with-flutter-firebase-part-1.md), мы сделали первый экран для приложения, **Flutter Keep**. В этой статье мы будем создавать редактор заметок с поддержкой обратимых действий и исследовать волшебную анимацию [Hero](https://flutter.dev/docs/development/ui/animations/hero-animations). 
 
 
-## The note editor
-There’re many types of notes in [Google Keep](https://www.google.com/keep), including plain-text notes, audio notes, and checklists, with optional image attachments. However, in this example, we’ll focus on the plain-text editor to keep things simple.
-The following is a preview of what we’re going to build:
+## Редактор заметок
+В [Google Keep](https://www.google.com/keep), много типов записей, включая обычные текстовые заметки, аудио заметки, чеклисты с опцией прикрепления картинки. Однако в нашем примере мы сфокусируемся на обычном редакторе заметок, это будет проще.
+
+На картинке анонс того что мы будем делать:
 [Note editor preview](https://iswift.ru/images/1_MGIa1fUmmPk2K87fMC9DmA.jpeg)
 Note editor preview
 
