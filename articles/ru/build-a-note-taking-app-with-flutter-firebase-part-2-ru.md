@@ -14,14 +14,14 @@
 ![Note editor preview](https://iswift.ru/images/1_MGIa1fUmmPk2K87fMC9DmA.jpeg)
 Note editor preview
 
-In essence, it composites of two text fields, one for the title, another for the plain-text content. Plus, a top ```AppBar``` and a ```ModalBottomSheet``` provides actions to update either the state or the color of the note.
-So let’s start with a ```StatefulWidget```:
+По сути он состоит из двух текстовых полей в одном тайтл в текстовый контент. Плюс, в верху ```AppBar``` и  ```ModalBottomSheet``` обеспечивают действия обновления либо состояния либо цвета записи.
+Итак, давайте начнём с ```StatefulWidget```:
 
 <script src="https://gist.github.com/xinthink/55c8d5ee739d729e4556ba78e53af4fc.js"></script>
 note_editor.dart
 
-In the editor state, we keep a copy of the original note (could be an empty one) to check whether the editor is dirty.
-And don’t forget to make it accessible from the ```HomeScreen```:
+В состоянии редактора мы сохраняем копию исходной заметки (возможно, пустую), чтобы проверить, не загрязнен ли редактор.
+И не забудьте сделать это доступным из ```HomeScreen```:
 
 <script src="https://gist.github.com/xinthink/16e0fc34f115ac91b2fad5b685a5444e.js"></script>
 home_screen.dart
