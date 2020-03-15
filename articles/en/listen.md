@@ -5,4 +5,5 @@
 ## 4. [Flutter + Stripe + Firebase](flutter-stripe-firebase)
 ## 5. [Flutter Chat using Firebase Realtime Database](flutter-chat-using-firebase-realtime-database)
 ## 6. [Build a note-taking app with Flutter + Firebase — Part I](build-a-note-taking-app-with-flutter-firebase-part-1)
+## 7. [Build a note-taking app with Flutter + Firebase — Part II](build-a-note-taking-app-with-flutter-firebase-part-2)
 
