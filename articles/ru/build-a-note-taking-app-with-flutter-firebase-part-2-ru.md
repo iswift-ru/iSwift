@@ -26,40 +26,44 @@ note_editor.dart
 <script src="https://gist.github.com/xinthink/16e0fc34f115ac91b2fad5b685a5444e.js"></script>
 home_screen.dart
 
-Ok, go on building the widget:
+Ok, продолжаем делать виджет:
 <script src="https://gist.github.com/xinthink/ea6cab070973d44c2c1bafebaf21b231.js"></script>
 editor_state.dart
 
-We’re going to save the note to FireStore before the editor is closed, by using a ```WillPopScope``` widget, which fires the ```onWillPop``` callback right before the current screen is being dismissed.
+
+Мы должны сохранить заметку перед тем как закроем редактор, для этого будем использовать ```WillPopScope``` виджет, который запустит ```onWillPop``` обратный вызов перед непосредственным закрытием текущего экрана.
 
 <script src="https://gist.github.com/xinthink/4031a6c058ef49055aa0640852703664.js"></script>
 NoteEditor#onWillPop
 
-Introducing a ```ChangeNotifierProvider``` is to provide the ```Note``` object being edited to descendant widgets to keep them aligned with the latest state. For example, the editor should update the background color when the user picks a different one in the ```ColorPicker``` widget.
-To use ```ChangeNotifierProvider```, the Note class has to extend the ```ChangeNotifier```, and to ```notifyListeners``` whenever its state has changed:
+Представляем ```ChangeNotifierProvider``` предоставляет ```Note``` объект, отредактированный к виджетам потомка, чтобы сохранить их выровненными с последним состоянием. Для примера, редактор должен обновить цвет заднего фона, когда пользователь выбирает другой цвет в виджете  ```ColorPicker```.
+
+Использовать ```ChangeNotifierProvider```,  Note класс должен быть extend ```ChangeNotifier```, и ```notifyListeners``` каждый раз когда его статус поменяется:
 
 <script src="https://gist.github.com/xinthink/273c2e989febb8d7cb6cbc649b409a44.js"></script>
 note.dart
 
-We’ll see how it works.
-Actions like archiving and picking a theme color are organized in a bottom sheet.
-One thing that may be confusing is when we ```showModalBottomSheet```, we have to provide the note object again, or the descendant widgets (of the bottom sheet) won’t be able to retrieve it via ```Consumer``` or ```Provider.of.```(It’s a different widget tree from the editor body)
+Давайте посмотрим как это работает.
+Действия архивации и выбора цвета темы орагнизованны в нижней части листа.
+Одно может сбить с толку  это когда мы  ```showModalBottomSheet```, Мы должны предоставить объект заметки снова, или дочерние виджеты (нижнего листа) не сможет получить его через ```Consumer``` или ```Provider.of.```(Это другое дерево виджета из тела редактора)
 
 <script src="https://gist.github.com/xinthink/452e4fdbab98f7e7a035dd4325bc7ac7.js"></script>
 NoteEditor#showModalBottomSheet
 
-To understand how a ```ChangeNotifierProvider``` works, we take the color picker as an example.
-What does the ```LinearColorPicker``` do? It renders a horizontal list of available tints for a note:
+Понять как ```ChangeNotifierProvider``` работает, мы выбирем цвет, как напримере.
+Что делает ```LinearColorPicker```? Визуализация горизонтального списка доступных оттенков для заметки:
 
 <script src="https://gist.github.com/xinthink/19d042dd248f868df4bc7d576684a6e6.js"></script>
 color_picker.dart
 
-When one of the tints is selected, the picker updates the ```color``` property of the note, and that is it.
-An ancestor widget (of the ```ColorPicker```) we’ve built previously, which watching the note, gets notified and then refreshes the screen so that we can see the whole editor is tinted with the color we pick.
+
+Когда один из оттенков выбран, обновляется свойство  ```color``` в заметке вот и всё.
+Ранее созданный виджет предка ( ```ColorPicker```), который наблюдает за заметкой, получает уведомление и затем обновляет экран, чтобы мы могли видеть весь редактор тонированным цветом, который мы выбираем.
+
 [Editor state synchronization](https://iswift.ru/images/1_lxF2s-WTKFumm_LjPzrwdQ.gif)
 Editor state synchronization
 
-The other actions, such as deletion and archiving, share the same mechanism.
+Другие действия, такие как удаление и архивация используют тот же мехаанизм.
 
 ## Reversible operations
 We can now edit a note by updating the properties including the state. But how about the UX? What if users delete a note by accident?
