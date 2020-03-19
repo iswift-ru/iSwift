@@ -65,9 +65,11 @@ Editor state synchronization
 
 Другие действия, такие как удаление и архивация используют тот же мехаанизм.
 
-## Reversible operations
-We can now edit a note by updating the properties including the state. But how about the UX? What if users delete a note by accident?
-For dangerous operations like deleting or archiving, a ```SnackBar``` could be used to provide a reverse action, e.g., restoring or unarchiving, in addition to a prompt message.
+## Реверсивные действия
+Теперь можно изменить заметку, обновив свойства, включая состояние. Но как насчёт UX? Что делать, если пользователи удалили заметку случайно?
+
+Для опасных операций таких как удаление или архивация, ```SnackBar``` может использоваться для выполнения обратного действия, т.е. восстановление или разархивация в дополнительной подсказке.
+
 
 [](https://iswift.ru/images/1_jSq4WiKVETUOcmoDWipdzg.gif)
 
