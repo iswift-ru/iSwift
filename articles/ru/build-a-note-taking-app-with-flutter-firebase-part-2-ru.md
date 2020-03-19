@@ -65,7 +65,7 @@ Editor state synchronization
 
 Другие действия, такие как удаление и архивация используют тот же мехаанизм.
 
-## Реверсивные действия
+## Обратимые операции
 Теперь можно изменить заметку, обновив свойства, включая состояние. Но как насчёт UX? Что делать, если пользователи удалили заметку случайно?
 
 Для опасных операций таких как удаление или архивация, ```SnackBar``` может использоваться для выполнения обратного действия, т.е. восстановление или разархивация в дополнительной подсказке.
@@ -73,18 +73,19 @@ Editor state synchronization
 
 [](https://iswift.ru/images/1_jSq4WiKVETUOcmoDWipdzg.gif)
 
-To implement reversible operations more cleanly, we’re going to apply the [Command Pattern](https://en.wikipedia.org/wiki/Command_pattern).
-First, we define the command interface, which is responsible for applying an action to a note.
+Для более чистого выполнения обратимых операций мы будем применять [Command Pattern](https://en.wikipedia.org/wiki/Command_pattern).
+
+Во первых мы определим коммандный интерфейс, который будет ответственный за выполнение действий к заметке.
 
 <script src="https://gist.github.com/xinthink/273367c3be45f2e06f0617a2f5325e68.js"></script>
 note_command.dart
 
-For this notebook app, actions considered reversible are all about mutating the state of a note. So only one concrete command is needed. However, nothing prevents you from extending it to other situations.
+Для этого приложения заметок действия, считающиеся обратимыми, направлены на изменение состояния заметки. Так что нужна только одна конкретная команда. Однако ничто не мешает распространить его на другие ситуации.
 
 <script src="https://gist.github.com/xinthink/bfb348de0e95da409d4622d9f0cd5c18.js"></script>
 note_state_command.dart
 
-Next, we produce and consume commands, for example:
+Дальше, мы создадим и используем команды, для примера:
 
 <script src="https://gist.github.com/xinthink/5a292f5d1048bfd8577b2c41b861f51f.js"></script>
 Using commands
