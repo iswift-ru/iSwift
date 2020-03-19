@@ -90,57 +90,66 @@ note_state_command.dart
 <script src="https://gist.github.com/xinthink/5a292f5d1048bfd8577b2c41b861f51f.js"></script>
 Using commands
 
-Done, we’ve made the dangerous operations reversible!
+Done, we’ve made the dangerous operations reversible! Теперь мы сделали опасные операции обратимыми.
 
-## Hero transition
-Now we have a working note editor, let’s take a step further, by adding a beautiful transition animation between the ```HomeScreen``` and the ```NoteEditor```.
+## Hero переход
+Сейчас мы имеем работающий редактор заметок, давайте приступим к следующему шагу, добавим красивый анимированный переход между ```HomeScreen``` и ```NoteEditor```. 
 
 [](https://iswift.ru/images/1_DsydtXamxtPWtUva2NNvag.gif)
 
-We can see that a note item grows to the size of the entire screen, from where it located in the grid. In Flutter, that’s called a Hero Animation.
-The usage is simple. First, we wrap the note item in the grid or list with a ```Hero``` widget:
+Мы видим, что элемент заметки увеличивается до размера всего экрана, откуда он расположен в сетке. В Flutter, это называется Hero Animation.
+
+Прост в использовании. Во первых, мы обернём элемент заметки в сетку или лист виджетом ```Hero```:
+
 
 <script src="https://gist.github.com/xinthink/4c823df06de3a325ccf2d0d09fa71b7c.js"></script>
 Hero note item
 
-Then wrap the editor widget too:
+Затем обернём виджет редактора:
 <script src="https://gist.github.com/xinthink/50837a0b043d6f884979078f067d5dfa.js"></script>
 Hero note editor
 
-In the above snippets, the two tags passed to the ```Hero``` widgets must be identical.
-And the ```DefaultTextStyle``` widgets are applied to avoid the big underlined text during screen transition on the iOS platform.
-Now we can leave the rest to the Flutter framework.
-What noticeable is that the standard screen transition animation is platform-specific. You could make a custom transition as you need, but it is beyond the scope of this article. Please refer to this [cookbook](https://flutter.dev/docs/cookbook/animation/page-route-animation).
+В вышеприведенных фрагментах два тега, переданные виджетам ```Hero```, должны быть идентичными.
+И ```DefaultTextStyle```виджеты применены, чтобы избежать большого подчеркнутого текста во время перехода экрана на платформе iOS.
 
-## Tips
-In an example app, we don’t bother to apply patterns like [BLOC](https://bloclibrary.dev/). But there are still ways to keep the code clean and avoid boilerplates.
-For example, we can move the reversible operation handling procedure to a stand-alone [mixin](https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins), to make a cleaner separation between UI and logic, and also make it reusable.
+Теперь мы можем оставить в покое Flutter фреймворк.
+
+Что примечательно, так это то, что стандартная анимация перехода экрана является специфичной для платформы. You could make a custom transition as you need, but it is beyond the scope of this article. Вы можете сделать пользовательский переход если нужно, но это за пределами данной статьи. Пожалуйста, перейдите сюда [cookbook](https://flutter.dev/docs/cookbook/animation/page-route-animation).
+
+## Шаги
+В примере приложения, мы не беспокоились о применении структуры такой как [BLOC](https://bloclibrary.dev/). Но есть еще способы сохранить код чистым и избежать шаблонов.
+
+Например, можно переместить обратимую процедуру обработки операций в автономный режим [mixin](https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins), чтобы сделать более чище разделение между UI и логикой, а также сделать его повторно используемым.
 
 <script src="https://gist.github.com/xinthink/55d100dbcce13b11a025701218b3caf6.js"></script>
 command_handler.dart
 
-Whenever you need to handle commands, just mix it in:
+Каждый раз когда необходима обработка команд, просто смешивайте их в:
 
 <script src="https://gist.github.com/xinthink/50d2e408173bd08c6fe3c0d5c1dc72ba.js"></script>
 Mixin CommandHandler
 
-In addition, with Dart SDK ```2.7.0``` or later, we can leverage [extension methods](https://dart.dev/guides/language/extension-methods) to do things magical.
-We can augment the ```Note``` model with FireStore related functionalities:
+Кроме того, начиная с Dart SDK ```2.7.0``` или позже, вы можете эффективно использовать [дополнительные методы](https://dart.dev/guides/language/extension-methods) делая магические вещи.
+
+Мы можем дополнить модель ```Node``` функциональными возможностями FireStore
 
 <script src="https://gist.github.com/xinthink/e8f2a9fc6671bc6e139fa34d76aa2db7.js"></script>
 note_store.dart
 
-Which makes persisting a note as easy as a method call:
+Что делает сохранение заметки так же простым, как вызов метода:
 <script src="https://gist.github.com/xinthink/f3d3176563b11cbfc5d8c9965acfe64b.js"></script>
 Using note extensions
 
-We can even add properties and methods to an enumeration, which is impossible in the declaration of enumerated types:
+Мы даже можем добавить свойства и методы в перечисление, что невозможно в объявлении перечисляемых типов:
+
 <script src="https://gist.github.com/xinthink/1f98ec3bca2fe7e8af8c161ffd9ad827.js"></script>
 Extensions on an enum
 
-That saves us a lot of repeated code!
-Wrapping it up, we’ve delivered a working plain-text note editor in this iteration. We’ve even added features like reversible actions and Hero transitions. Please find the complete code example in this [GitHub repo](https://github.com/xinthink/flutter-keep).
-In the next part, I’d like to introduce how to query different subsets of notes from FireStore, and the issue of composite indexes.
+Это спасает нас от повторения кода!
 
-Thank you for reading! 🙌
+Завершая его, мы поставили рабочий редактор простых текстовых заметок в этой части. Мы даже добавили такие функции, как обратимые действия и Hero переходы. Найти полностью код примера вы можете в [GitHub repo](https://github.com/xinthink/flutter-keep).
+
+В следующей части я хотел бы рассказать о том, как запрашивать различные подмножества заметок из FireStore, а также о выпуске составных индексов.
+
+Спасибо, что читали! 🙌
 
