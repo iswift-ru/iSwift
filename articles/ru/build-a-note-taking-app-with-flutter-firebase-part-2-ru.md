@@ -4,7 +4,7 @@
 
 Рад видеть вас во второй части статьи ***Делаем блокнот с заметками на Flutter и Firebase***. Если вы не читали предыдущую статью, то вы можете найти её [здесь](https://iswift.ru/articles/ru/build-a-note-taking-app-with-flutter-firebase-part-1-ru).
 
-В [части 1](build-a-note-taking-app-with-flutter-firebase-part-1.md), мы сделали первый экран для приложения, **Flutter Keep**. В этой статье мы будем создавать редактор заметок с поддержкой обратимых действий и исследовать волшебную анимацию [Hero](https://flutter.dev/docs/development/ui/animations/hero-animations). 
+В [части 1](https://iswift.ru/articles/ru/build-a-note-taking-app-with-flutter-firebase-part-1-ru), мы сделали первый экран для приложения, **Flutter Keep**. В этой статье мы будем создавать редактор заметок с поддержкой обратимых действий и исследовать волшебную анимацию [Hero](https://flutter.dev/docs/development/ui/animations/hero-animations). 
 
 
 ## Редактор заметок
