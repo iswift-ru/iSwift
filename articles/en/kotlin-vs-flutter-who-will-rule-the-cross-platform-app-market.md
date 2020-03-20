@@ -1,6 +1,6 @@
 # Kotlin Vs Flutter: Who Will Rule the Cross-platform App Market?
 There was a time when cross-platform development was considered a synonym for building an app using React Native and Flutter. The business enthusiasts and mobile app development companies were relying upon these two frameworks to make their presence on both Android and iOS in a cost-effective manner.
-[](https://iswift.ru/images/1_n3kTDW55yapM98SkGZ7Wvg.png)
+![](https://iswift.ru/images/1_n3kTDW55yapM98SkGZ7Wvg.png)
 
 But now, Kotlin has also entered the competition; making everyone wonder who will be the ultimate ruler of the cross-platform market. Now, while we have already looked into the Flutter and React Native comparison earlier, we will talk descriptively about the Kotlin vs Flutter comparison and help you find the right option for your cross-platform app development needs.
 
@@ -10,7 +10,7 @@ Kotlin multiplatform, is an additional feature of the language that helps it exp
 *While we’ll be focusing on the multiplatform functionality here, you can get acquainted with Kotlin’s native platform characteristics*
 The concept of investing in Kotlin app development for cross-platform presence is still new in the market, but it is surprisingly embraced by various popular brands.
 
-[](https://iswift.ru/images/0_GirseZGKXYCL4CBe.png)
+![](https://iswift.ru/images/0_GirseZGKXYCL4CBe.png)
 
 And the prime reason behind this is the following set of benefits it avail to the mobile app developers.
 ## Pros of Going with Kotlin Multiplatform
@@ -18,7 +18,7 @@ And the prime reason behind this is the following set of benefits it avail to th
 The biggest benefit of opting for Kotlin is that you won’t have to shift the complete application. You can begin with a single module or feature, determine its working, and then progressively migrate other parts.
 ### 2. Ease to Learn
 Since Kotlin has a syntax quite similar to other top programming languages like Swift, Java, Groovy, and Scala, it is quite easy to learn the language and invest in Kotlin multiplatform development.
-[](https://iswift.ru/images/0_d2LL8VH8KWrShorn.png)
+![](https://iswift.ru/images/0_d2LL8VH8KWrShorn.png)
 
 ### 3. Reuse of Business Logic
 It’s true that it is not the first tool that enables one to separate business logic and UI. Various cross-platform frameworks like Xamarin and React Native have been offering this service.
@@ -44,7 +44,7 @@ With this covered, let’s take a recap of Flutter before diving deeper into the
 Introduced back in 2015 with an intent to prepare market for Google [Fuchsia](https://en.wikipedia.org/wiki/Google_Fuchsia), Flutter is an open-source SDK that enables one to craft beautiful, native-looking mobile, web, and desktop using a single codebase.
 Google’s UI framework targeted numerous prevailing technological and market challenges and provided effective solutions. A result of which is that Flutter became an ideal cross-platform app development framework in no-time. Not only this, it entered into the list of technologies that top brands work with.
 
-[](https://iswift.ru/images/0_77RC9OdNdkqLD_VE.png)
+![](https://iswift.ru/images/0_77RC9OdNdkqLD_VE.png)
 
 This made everyone more curious to know what are the features of Flutter and the respective advantages, a glimpse of which you can get from the next section.
 ## Advantages of Considering Flutter
@@ -68,7 +68,7 @@ The foremost drawback of selecting Flutter for your application development plan
 There’s no denying the fact that Dart is easy to learn and faster to implement. However, it is not yet as popular as its peers — Java, C#, JavaScript, and C. This prevents developers from enrolling [the best dart programming courses](https://www.benzinga.com/money/best-dart-programming-courses/) and land into the Flutter industry.
 Now, as we have touched base on both, let’s see which is better for cross-platform development — Kotlin or Flutter.
 ## Factors to Consider for Comparing Kotlin Multiplatform and Flutter
-[](https://iswift.ru/images/0_QXLrxirl2KVHWtq7.png)
+![](https://iswift.ru/images/0_QXLrxirl2KVHWtq7.png)
 
 ### 1. Market Popularity
 Both Kotlin and Flutter are open-source and free to use tools. Because of this, developers are showing an interest in working with both.
