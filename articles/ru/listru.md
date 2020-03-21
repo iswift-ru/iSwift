@@ -6,5 +6,5 @@
 # 5. [Создаём чат на Flutter используя базу данных Firebase Realtime](flutter-chat-using-firebase-realtime-database-ru)
 # 6. [Делаем блокнот с заметками на Flutter и Firebase часть 1](build-a-note-taking-app-with-flutter-firebase-part-1-ru)
 # 7. [Делаем блокнот с заметками на Flutter и Firebase часть 2](build-a-note-taking-app-with-flutter-firebase-part-2-ru)
-
+# 8. [Kotlin или Flutter: Кто будет управлять межплатформенным рынком приложений?](kotlin-vs-flutter-who-will-rule-the-cross-platform-app-market-ru)
 
