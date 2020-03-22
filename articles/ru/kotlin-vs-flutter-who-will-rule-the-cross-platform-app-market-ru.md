@@ -1,6 +1,6 @@
 # Kotlin или Flutter: Кто будет управлять межплатформенным рынком приложений?
 
-There was a time when cross-platform development was considered a synonym for building an app using React Native and Flutter. The business enthusiasts and mobile app development companies were relying upon these two frameworks to make their presence on both Android and iOS in a cost-effective manner.
+Было время, когда кроссплатформенная разработка считалась синонимом построения приложения с помощью React Native и Flutter.  Бизнесс энтузиасты и компании по разработки мобильных приложений полагались на эти два фреймворка, чтобы сделать их присутствие как на Android, так и на iOS экономически выгодным.
 ![](https://iswift.ru/images/1_n3kTDW55yapM98SkGZ7Wvg.png)
 
 But now, Kotlin has also entered the competition; making everyone wonder who will be the ultimate ruler of the cross-platform market. Now, while we have already looked into the Flutter and React Native comparison earlier, we will talk descriptively about the Kotlin vs Flutter comparison and help you find the right option for your cross-platform app development needs.
