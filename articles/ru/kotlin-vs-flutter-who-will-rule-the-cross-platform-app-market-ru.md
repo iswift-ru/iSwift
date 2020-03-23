@@ -46,15 +46,21 @@
 Однако, несмотря на столь впечатляющие преимущества, мультиплатформенное расширение языка Котлин до сих пор не стало фаворитом из-за определенных недостатков.
 
 ## Минусы предпочтения мультиплатформы Kotlin
-### 1. Still in Experimental State
-Though introduced in Kotlin 1.2, the SDK has not yet reached a stable 1.0 version. It is still in an experimental state; making developers hesitant in picking it for their next big project.
-### 2. Finite Available Libraries
-Currently, only a few basic libraries like data serialization libraries and HTTP client libraries are available in the development environment. Although, many more libraries like DateTime library are expected to enter the market with the advent of Kotlin 1.4, the successor of Kotlin 1.3.60, it is tough to build applications seamlessly and effortlessly till date.
-### 3. Need Familiarity with Other Tech Stack
-Since Kotlin multiplatform is not designed to be a replacement for every application programming interface (API) that a platform focuses on, it is required for app development companies to have basic knowledge of each platform and API. This is again a drawback of picking Kotlin over Flutter and other cross-platform development options.
-### 4. Higher Development Cost
-Last but not least, the Kotlin SDK provides several semi-native functionalities. Because of this, it demands higher cost to build mobile apps, which eventually makes it not a good fit for creating MVPs and app prototypes.
-With this covered, let’s take a recap of Flutter before diving deeper into the market to know the Flutter and Kotlin multiplatform relationship.
+### 1. Все еще в экспериментальном состоянии
+
+Хоть и представлен Kotlin 1.2, SDK версии 1.0 не достигло стабильности. Это всё ещё экспериментальный статус, заставляя разработчиков колебаться в выборе для их последующих больших проектов.
+
+### 2. Конечное состояние библиотек
+В настоящее время только несколько базовых библиотек, таких как библиотеки сериализации данных и библиотеки HTTP client доступны в среде разработки. Несмотря на то, что ожидается, что с появлением Kotlin 1.4, преемника Kotlin 1.3.60, на рынок выйдут еще многие библиотеки, такие как, например, "Библиотека DateTime", трудно создавать приложения в настоящее временя.
+
+### 3. Требуется знакомство с другими технологиями
+Поскольку мультипликатор Kotlin не предназначен для замены каждого интерфейса прикладного программирования (API), на котором сосредоточена платформа, компаниям-разработчикам приложений необходимо иметь базовые знания о каждой платформе и API. Это опять таки недостаток при выборе между Котлином, Флаттером и других кросс-платформенных опций.
+
+### 4. Более высокая стоимость разроботки
+Наконец, но не в последнюю очередь, Kotlin SDK предоставляет несколько полуродных функций. Из-за этого требуется более высокая стоимость создания мобильных приложений, что в конечном итоге делает его неподходящим для создания MVP и прототипов приложений.
+
+Давайте рассмотрим Flutter перед погружением глубже на рынок, чтобы узнать Flutter и Kotlin мультиплатформенные отношения.
+
 ## What is Flutter UI Framework?
 Introduced back in 2015 with an intent to prepare market for Google [Fuchsia](https://en.wikipedia.org/wiki/Google_Fuchsia), Flutter is an open-source SDK that enables one to craft beautiful, native-looking mobile, web, and desktop using a single codebase.
 Google’s UI framework targeted numerous prevailing technological and market challenges and provided effective solutions. A result of which is that Flutter became an ideal cross-platform app development framework in no-time. Not only this, it entered into the list of technologies that top brands work with.
