@@ -8,12 +8,13 @@
 
 Теперь, хоть мы уже сравнивали Flutter и React Native ранее,  мы будем говорить описательно сравнивая Kotlin и Flutter и поможем вам сделать правильный выбор для вашего кросс-платформенного приложения.
 
-## What is Kotlin Multiplatform?
+## Что за мультиплатформа такая Kotlin?
 
-Kotlin multiplatform, is an additional feature of the language that helps it expand beyond Android application development. Meaning, it enables developers to share codes, data, and business logic across multiple platforms such as iOS, Web, Linux, MacOS, Android, and Java Virtual Machine (JVM).
-*While we’ll be focusing on the multiplatform functionality here, you can get acquainted with Kotlin’s native platform characteristics*
-The concept of investing in Kotlin app development for cross-platform presence is still new in the market, but it is surprisingly embraced by various popular brands.
+Мультиплатформа Kotlin - дополнительная функция языка, которая помогает ему расширяться за пределы разработки приложений Android. Это означает что разработчики могут обмениваться кодом, информацией и бизнес логикой на нескольких мультиплатформах таких как iOS, Web, Linux, MacOS, Android и Java Virtual Machine (JVM)
 
+*В то время как здесь мы сосредоточимся на многофункциональности, вы можете ознакомиться с характеристиками собственной платформы Kotlin*
+
+Концепция инвестирования в разработку приложения Kotlin для кросс-платформенного присутствия по-прежнему нова на рынке, но ее удивительно принимают различные популярные бренды.
 ![](https://iswift.ru/images/0_GirseZGKXYCL4CBe.png)
 
 And the prime reason behind this is the following set of benefits it avail to the mobile app developers.
