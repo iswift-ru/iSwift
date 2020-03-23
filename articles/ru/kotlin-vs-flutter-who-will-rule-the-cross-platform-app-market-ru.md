@@ -24,21 +24,28 @@
 ### 1. Это SDK, не фреймворк
 Самое большое преимущество выбора  Котлина в том, что не придется перемещать готовое приложение. Можно начать с одного модуля или элемента, определить его работу, а затем постепенно перенести другие детали.
 
-### 2. Ease to Learn
-Since Kotlin has a syntax quite similar to other top programming languages like Swift, Java, Groovy, and Scala, it is quite easy to learn the language and invest in Kotlin multiplatform development.
+### 2. Простота в изучении
+Так как Kotlin имеет синтаксис вполне похожий на другие топовые языки программирования такие как like Swift, Java, Groovy, и Scala это позволяет легче учить язык и инвестировать в мультиплатформенную разработку Котлина.
 ![](https://iswift.ru/images/0_d2LL8VH8KWrShorn.png)
 
-### 3. Reuse of Business Logic
-It’s true that it is not the first tool that enables one to separate business logic and UI. Various cross-platform frameworks like Xamarin and React Native have been offering this service.
-However, the fact that makes it different from others is that it employs shared logic and libraries below the UI layer. This makes mobile application developers interact with the native environment — Swift and XCode for iOS, JavaScript for web, and Kotlin and Android Studio for Android -without using any bridge and deliver codes in a more native way.
-### 4. Native UI Experience
-Kotlin Multiplatform does not demand developers to follow any instruction for UI creation. It enables UI developers to work on the appearance, behavior, and performance of the application just like they would in case of native.
-### 5. Higher Performance
-One of the advantages of considering Kotlin language for cross-platform development is that multiplatform compiles code to the explicit same format as the targeted platform. This makes it as good at performance as its native counterparts.
-### 6. Enhanced Flexibility and Scalability
-It lets developers scale up their app project and operate without using any VM. This makes it a perfect choice for crafting a mobile app while focusing on flexibility and scalability factors.
-However, despite such impressive advantages, the multiplatform extension of Kotlin language is still struggling to become the favorite of all because of certain disadvantages.
-## Cons of Preferring Kotlin Multiplatform
+### 3. Повторно использовать безнес логику
+Правда, это не первый инструмент, позволяющий разделить бизнес-логику и пользовательский интерфейс. Различные кросс-платформенные фреймворки наподобие Xamarin и React Native так же имеют такой сервис.
+
+Однако тот факт, что он отличается от других, заключается в том, что в нем используется общая логика и библиотеки ниже уровня пользовательского интерфейса. Это позволяет разработчикам мобильных приложений взаимодействовать с нативной средой разработки — Swift и XCode для iOS, JavaScript для web, а так же Kotlin и Android Studio для Android - без использования различных соединений (мостов) и доставлять коды более встроенным способом.
+
+### 4. Нативные UI события
+Котлин мультиплатформа не требует от разработчиков следовать каким либо инструкциям для создания пользовательских интерфейсов. Это позволяет разработчикам пользовательского интерфейса работать с внешним видом, поведением и производительностью приложения так же как и в нативе.
+
+### 5. Высокая производительность
+
+Одно из преимуществ рассматривая язык Kotlin для кросс-платформенной разработки это мультиплатформенная компиляция кода в подобный формат как предназначенный для платформы.  Это делает его таким же хорошим по производительности, как и их нативные аналоги.
+
+### 6. Улучшенная гибкость и масштабируемость
+ОН позволяет разработчикам масштабировать их проект приложения и работать без использования какой либо виртуальной машины. Это становится прекрасным выбором для разрабатывания мобильных приложений, которые сфокусированы на факторы гибкости и масштабируемости.  
+
+Однако, несмотря на столь впечатляющие преимущества, мультиплатформенное расширение языка Котлин до сих пор не стало фаворитом из-за определенных недостатков.
+
+## Минусы предпочтения мультиплатформы Kotlin
 ### 1. Still in Experimental State
 Though introduced in Kotlin 1.2, the SDK has not yet reached a stable 1.0 version. It is still in an experimental state; making developers hesitant in picking it for their next big project.
 ### 2. Finite Available Libraries
