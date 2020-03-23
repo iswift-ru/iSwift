@@ -14,13 +14,16 @@
 
 *В то время как здесь мы сосредоточимся на многофункциональности, вы можете ознакомиться с характеристиками собственной платформы Kotlin*
 
-Концепция инвестирования в разработку приложения Kotlin для кросс-платформенного присутствия по-прежнему нова на рынке, но ее удивительно принимают различные популярные бренды.
+Концепция инвестирования в разработку приложения Kotlin для кросс-платформенного присутствия по-прежнему нова на рынке, но ее удивительно применяют различные известные бренды.
+
 ![](https://iswift.ru/images/0_GirseZGKXYCL4CBe.png)
 
-And the prime reason behind this is the following set of benefits it avail to the mobile app developers.
-## Pros of Going with Kotlin Multiplatform
-### 1. It’s a SDK, not framework
-The biggest benefit of opting for Kotlin is that you won’t have to shift the complete application. You can begin with a single module or feature, determine its working, and then progressively migrate other parts.
+И основной причиной этого является следующий набор преимуществ, которые он получает от разработчиков мобильных приложений.
+
+## Плюсы работы с мультиплатформой Kotlin
+### 1. Это SDK, не фреймворк
+Самое большое преимущество выбора  Котлина в том, что не придется перемещать готовое приложение. Можно начать с одного модуля или элемента, определить его работу, а затем постепенно перенести другие детали.
+
 ### 2. Ease to Learn
 Since Kotlin has a syntax quite similar to other top programming languages like Swift, Java, Groovy, and Scala, it is quite easy to learn the language and invest in Kotlin multiplatform development.
 ![](https://iswift.ru/images/0_d2LL8VH8KWrShorn.png)
