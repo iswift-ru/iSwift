@@ -86,8 +86,9 @@ This empowers developers to view the documentation, post their queries in the op
 
 И таким образом легко решить, выглядит ли изменение идеально с другими элементами приложения или нет.
 
-### 3. Highly Customisable
-By investing in [Flutter application development](https://www.solutionanalysts.com/blog/guide-for-flutter-application-development), developers get an opportunity to use different widgets in the development environment. This makes it easier for them to create mobility solutions that are faster and have customized look & feel.
+### 3. Высокая настраиваемость
+Инвистируя в [разработку приложений на Flutter](https://www.solutionanalysts.com/blog/guide-for-flutter-application-development), разработчики получают возможность использовать различные виджеты в среде разработки. Это позволяет им легче создавать мобильные решения быстрее и иметь индивидуальный внешний вид.
+
 ### 4. Lower Development Timeline and Cost
 One of the cross-platform benefits of Flutter is that it renders opportunities to create native-like apps for both iOS and Android using a single codebase. Something that makes the cost to create a Flutter mobile app considerably low.
 ### 5. Support for Google Firebase
