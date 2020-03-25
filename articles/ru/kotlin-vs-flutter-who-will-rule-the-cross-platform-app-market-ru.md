@@ -61,14 +61,18 @@
 
 Давайте рассмотрим Flutter перед погружением глубже на рынок, чтобы узнать Flutter и Kotlin мультиплатформенные отношения.
 
-## What is Flutter UI Framework?
-Introduced back in 2015 with an intent to prepare market for Google [Fuchsia](https://en.wikipedia.org/wiki/Google_Fuchsia), Flutter is an open-source SDK that enables one to craft beautiful, native-looking mobile, web, and desktop using a single codebase.
-Google’s UI framework targeted numerous prevailing technological and market challenges and provided effective solutions. A result of which is that Flutter became an ideal cross-platform app development framework in no-time. Not only this, it entered into the list of technologies that top brands work with.
+## Что это такое Flutter UI фреймворк?
+Был представлен ещё в 2105 году с подготовой к выходу на рынок для Google [Fuchsia](https://en.wikipedia.org/wiki/Google_Fuchsia), 
+Flutter это SDK с открытым кодом, что позволяет создавать красивые, нативно выглядящие на мобилке, web и десктопе приложения используя одну и туже кодовую базу.
 
+Гугловский UI фреймворк нацелен на решение многочисленных существующих технологических и рыночных проблем и предоставляет эффективные решения.
+Результатом этого является то, что Flutter стал идеальным кросс-платформенным фреймворком разработки приложений за бесценок. Мало того, он вошёл в список технологий, с которыми работают топ-бренды.
+ 
 ![](https://iswift.ru/images/0_77RC9OdNdkqLD_VE.png)
 
-This made everyone more curious to know what are the features of Flutter and the respective advantages, a glimpse of which you can get from the next section.
-## Advantages of Considering Flutter
+Это вызывает большое любопытсво знать все функции Flutter и соответствующие преимущества, в кратце о которых вы узнаете в следующей секции статьи.
+
+## Преимущества рассмотрения Flutter
 ### 1. Open-Source and Free to Use
 Both Flutter and the underlying programming language, Dart are open-source and free to use. This empowers developers to view the documentation, post their queries in the open developer forum, and eventually, learn and implement the code.
 ### 2. Hot Reload Functionality
