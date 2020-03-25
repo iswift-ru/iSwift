@@ -73,11 +73,19 @@ Flutter это SDK с открытым кодом, что позволяет с�
 Это вызывает большое любопытсво знать все функции Flutter и соответствующие преимущества, в кратце о которых вы узнаете в следующей секции статьи.
 
 ## Преимущества рассмотрения Flutter
-### 1. Open-Source and Free to Use
-Both Flutter and the underlying programming language, Dart are open-source and free to use. This empowers developers to view the documentation, post their queries in the open developer forum, and eventually, learn and implement the code.
-### 2. Hot Reload Functionality
-One of the biggest reasons why Flutter is preferred by mobile application development agencies is its hot reloading functionality.
-The functionality makes it easier for anyone to make any change at the backend and view the difference at the front-end simultaneously. And this way, easily decide whether the change looks perfect with other elements of the application or not.
+### 1. Открытый код и свободное использование
+
+Оба, и Flutter и лежащий в онове язык программирования, Dart с открытым кодом и свободны для использованием
+This empowers developers to view the documentation, post their queries in the open developer forum, and eventually, learn and implement the code. Это уполномачивает разработчиков смотреть документацию, задавать их вопросы на форумах разработчиков и в конце концов, изучать и реализовывать код.
+
+### 2. Функционал быстрой перезагрузки
+
+Одна из самых больших причин, почему Flutter предпочтителен в мобильной разработке агенствами это его способность "быстрой перезагрузки".
+
+Этот функционал позволяет легко каждому сделать изменения в бэкенде и увидеть разницу в фронтенд симуляторе.
+
+И таким образом легко решить, выглядит ли изменение идеально с другими элементами приложения или нет.
+
 ### 3. Highly Customisable
 By investing in [Flutter application development](https://www.solutionanalysts.com/blog/guide-for-flutter-application-development), developers get an opportunity to use different widgets in the development environment. This makes it easier for them to create mobility solutions that are faster and have customized look & feel.
 ### 4. Lower Development Timeline and Cost
