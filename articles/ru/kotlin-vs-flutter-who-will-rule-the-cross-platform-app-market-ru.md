@@ -149,19 +149,31 @@ Flutter позволяет разработчикам использовать �
 В конечном итоге это означает что он не нуждаются в сторонних библиотеках и инструментах для соединения с нативной разроботкой.
 Однако он необходим в случае с кросс-платформенным SDK Flutter при условии, что он в основном является инструментом разработки пользовательского интерфейса.
 
-### 5. Scope in Backend Development
-When it comes to considering backend development services to know the difference between Kotlin multiplatform and Flutter, the former again has an edge over the latter.
-Whilst Flutter goes with [Firebase](https://firebase.google.com/), which is an effective BaaS (Backend-as-a-Service) platform, to ensure effective backend opportunities, Kotlin multiplatform enables developers to write backend code.
-### 6. Focus on Multiple Platforms
-Currently, applications designed for targeting mobile (Android and iOS) and web comes under the Flutter use cases. One cannot use it for making their presence on tvOS, Android Auto, CarOS, and WatchOS.
-However, there is no such constraint in the case of Kotlin multiplatform. It is designed to develop app projects for devices and platforms beyond mobile as well.
-So, preferring Kotlin multiplatform is a good choice for mobile application development services companies for launching their app idea on every imaginable platform and device.
-### 7. Job and Salary Scope
-Another important factor to consider while looking into Kotlin multiplatform vs Flutter comparison is job and salary scope.
-As per the StackShare community, Kotlin programming language is mentioned among the tech stacks by **268 companies and 210 developers**, whereas Flutter is listed as a technology stack by **42 companies and 146 developers**.
-Now, since Kotlin multiplatform is not an independent platform. It is an experimental extension of the native language and one can use it within Kotlin native environment, it gives an impression that it has more job options in the market.
-### 8. Documentation and Community Support
+### 5. Возможности в бэкенд разработке
+Когда дело доходит до рассмотрения услуг бэкэнд-разработки, чтобы знать разницу между Kotlin multiplatform и Flutter, первый снова имеет преимущество над последним.
+
+Пока Flutter идёт с [Firebase](https://firebase.google.com/), которая является эффективной платформой BaaS (Backend-as-a-Service) 
+обеспечивая эффективные возможности бекенда, Котлин позволяет разработчикам писать код бэкенда.
+
+### 6. Фокусировка на несколько платформ
+В настоящее время приложения, предназначенные для таргетинга мобильных (Android и iOS) и веб, попадают под сценарии использования 
+Однако ни кто не может использовать для tvOS, Android Auto, CarOS, and WatchOS.
+
+Однако, такого ограничения нету для мультиплатформы Котлин.  Она проектировалась для разработки проектов приложений для девайсов и мобильных платформ. 
+
+Поэтому, предпочитая мультиплафторму Kotlin - это хороший выбор для компаний, занимающихся разработкой мобильных приложений, для запуска их идеи приложения на каждой воображаемой платформе и устройстве.
+
+### 7. Объём работ и зарплаты
+
+Другой важный фактор при выборе между мультиплатформами Котлин и Флаттер это сравнение вакансий и зарплат.
+
+Согласнов StackShare сообществу, язык  программирования упомянается в технических стэках в 268 компаниях и 210 разработчиках, в то время как Флаттер состоит в списках технологий в 42 компаниях и 146 разработчиков.
+
+Теперь, поскольку Kotlin multiplatform не является независимой платформой. Это экспериментальное расширение родного языка и можно использовать его в родной среде Котлина, создается впечатление, что у него больше вариантов работы на рынке.
+
+### 8. Documentation and Community Support Документация и
 Compared to Flutter, Kotlin multiplatform is still new and in fact, in an experimental state. Because of this, the documentation and community support for the latter is somewhat lagging behind the former. But, it is expected that the documentation as well as community strength will improve once the multiplatform becomes stable; further encouraging all to use Kotlin for cross-platform development.
+
 ## Who’s the winner of the Cross-platform development battle?
 Both Kotlin multiplatform and Flutter are reliable, aim to reduce time to make a presence on both Android and iOS platforms, and are supported by Google. They are giving cut-throat competition to each other and are becoming more competitive with every release.
 In such a scenario, it is advisable to consult with mobility experts and analyze your cross-platform app requirements and priorities to determine which one is better — Kotlin vs Flutter.
