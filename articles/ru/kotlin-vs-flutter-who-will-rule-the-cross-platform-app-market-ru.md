@@ -98,16 +98,17 @@ This empowers developers to view the documentation, post their queries in the op
 Благодаря интеграции Firebase Flutter позволяет разработчикам добавлять бэкэнд-систему в среду разработки.
 
 ### 6. Подходит для создания MVPs и App прототипов.
-Flutter offers the functionality of building an application for both Android and iOS platforms in less time, cost, and effort. This makes Flutter a perfect option for MVP development and creating prototypes that can be used to test the water or raise fundings.
+
 Флаттер предлагает функционал построения приложений для обеих платформ Android и iOS за минимальное время, стоимость и усилие. Это делает Флаттер идеальным вариантом для MVP разработки и создания прототипов, которые могут быть использованы для сбора сведений или формирования финансирования. 
 
 ## Недостатки использования Flutter SDK
 
 ### 1. Большой размер приложения
-The foremost drawback of selecting Flutter for your application development plan is that the app size is too big. Compared to React Native and Xamarin, even the release file size of ‘Hello World’ app in this framework is around 6.7MB.
+
+Самый главный недостаток в выбирая Flutter для разработки вашего приложения в то что его размер будет велик. По сравнениб с React Nativ и Xamarin где размер релиза приложения "Hello World" будет около 6.7Мб.
 
 ### 2. Coding is Done in Dart
-There’s no denying the fact that Dart is easy to learn and faster to implement. Никто не отрицает, что Dart лёгок в изучении и быстр в имплеминтации. Однако, он не так популярен как его сверстники — Java, C#, JavaScript, и C. Это не позволяет разработчикам регистрировать [лучшие курсы по программированию dart](https://www.benzinga.com/money/best-dart-programming-courses/) и погрузиться в индустрию Flutter.
+Никто не отрицает, что Dart лёгок в изучении и быстр в имплеминтации. Однако, он не так популярен как его сверстники — Java, C#, JavaScript, и C. Это не позволяет разработчикам регистрировать [лучшие курсы по программированию dart](https://www.benzinga.com/money/best-dart-programming-courses/) и погрузиться в индустрию Flutter.
 
 Теперь посмотрим, что лучше для кросс-платформенной разработки - Kotlin или Flutter.
 
@@ -117,20 +118,37 @@ There’s no denying the fact that Dart is easy to learn and faster to implement
 ### 1. Популярность рынка
 Котлин и Флаттер оба с открытым исходным кодом и возможностью бесплатно использовать инструмены. Поэтому, разработчики проявляют рабочий интерес к ним обоим.
 
-If you check Google Trends, Flutter is showing a steep rise in its popularity when compared to Kotlin. Likewise, if you compare Kotlin and Flutter based on their GitHub presence, the former has [28.3K stars and 3.29K forks](https://www.stackshare.io/stackups/kotlin-vs-zsh-zshell) while the latter has [69.5K stars and 8.11 forks](https://stackshare.io/stackups/electron-vs-flutter).
-This indicates that Flutter is getting a huge momentum in the market, compared to Kotlin.
+Если вы проверите Google Trends,  Flutter показывает крутой подъём популярности по сравнению с Kotlin. Более того, если вы сравните Kotlin и Flutter присутствие на GitHub, то первый имеет [28.3K звёзд и 3.29K вилок](https://www.stackshare.io/stackups/kotlin-vs-zsh-zshell) в то время как второй [69.5K звёзд и 8.11 вилок](https://stackshare.io/stackups/electron-vs-flutter).
+ 
 
-### 2. Learning Curve
-If you consider the learning curve as a factor of comparison in the Kotlin native vs Flutter battle, the former undeniably wins. A reason behind is that it is interoperable with Java and Google offered various Kotlin learning courses a few months back.
-But, when talking about Kotlin Multiplatform and Flutter, the scenario is somewhat different. The Kotlin Multiplatform is a new ecosystem and has limited resources available in the market, in comparison to Flutter.
-Because of this, Flutter wins the competition.
-### 3. Performance
-Flutter lets developers use the same language for both layout and backend needs, enjoy higher animation speed, and much more.
-But, in comparison to Kotlin, it is still lagging much behind in the market. The prime reasoning behind which is that Kotlin multiplatform code compiles exactly in the format as that of the targeted platform.
-So, the winner of Flutter vs Kotlin multiplatform performance battle is the latter.
-### 4. Integration of Third-Party Libraries and Tools
-Kotlin multiplatform operates within the native platform ecosystems rather than building one. So, app experts can employ the same tools and libraries they have been using during native development, including Jetpack Compose and SwiftUI. Which ultimately means they need not look for third-party libraries and tools to bridge a connection with native environment.
-However, it is required in the case of the Flutter cross-platform SDK, provided it is basically a UI development tool.
+Это указывает на то что Flutter на данный момент более популярен на рынке по сравнению с Kotlin.
+
+### 2. Кривая обучения
+
+Если вы рассмотрите кривую обучения как фактор сравнения Kotlin против Flutter, первый определённо побеждает. 
+
+Причина этого в том что он совместим с Java и Google предлагает различные Kotlin курсы несколько месяцев назад.
+
+
+Но, когда говорим о мультиплатформах Kotlin и Flutter сценарий немного отличается.
+
+Мультиплатформа Котлин это новая экосистема и  ограничена ресурсами доступными на рунке, по сравнению с Flutter.
+Поэтому, Флаттер побеждает в этом сравнении.
+
+
+### 3. Производительность
+Flutter позволяет разработчикам использовать один и тот же язык как для макета, так и для бэкэнда, наслаждаться более высокой скоростью анимации и многое другое.
+
+Но сравнивая с Котлином он всё ещё сильно отстаёт на рынке. Основная причина отстования в том, что Котлин мультиплафторменный код компилируется в тот же формат что и нацелена платформа. Таким образом, победителем за производительность между Флаттером и Котлином стал последний.
+
+
+### 4. Интеграция со сторонними библиотеками и инструментами.
+ Мультиплатформа Котлин работает в пределах своей экосистемы.  
+Также специалисты по разработке приложений могут использовать различные инструменты и библиотеки, которые они использовали при нативной разработки, включая Jetpack Compose и SwiftUI.
+
+В конечном итоге это означает что он не нуждаются в сторонних библиотеках и инструментах для соединения с нативной разроботкой.
+Однако он необходим в случае с кросс-платформенным SDK Flutter при условии, что он в основном является инструментом разработки пользовательского интерфейса.
+
 ### 5. Scope in Backend Development
 When it comes to considering backend development services to know the difference between Kotlin multiplatform and Flutter, the former again has an edge over the latter.
 Whilst Flutter goes with [Firebase](https://firebase.google.com/), which is an effective BaaS (Backend-as-a-Service) platform, to ensure effective backend opportunities, Kotlin multiplatform enables developers to write backend code.
