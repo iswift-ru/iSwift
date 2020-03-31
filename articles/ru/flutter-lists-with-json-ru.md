@@ -36,30 +36,35 @@ Now run the app and you will see the below screen. Сейчас мы запус�
 
 Now let’s write some code to interact with this list. Let’s do a simple onTap interaction. When someone taps a list item, he’ll be taken to a different page where he could see the profile picture or any other details of the particular list item he tapped on.
 
-Open up main.dart and modify it as shown below.
+Теперь, давайте напишим некоторый код для взаимодействия с нашим списком. Сделаем простейшее взаимодействие с помощью onTap. Когда кто то нажимает на элемент списка он будет переведён на другую страницу где увидит профиль с фотографией.
+
+
+Откройте файл main.dart и модифицируйте его как показно ниже.
 
 <script src="https://gist.github.com/iswift-ru/47022cea476b65de3dd47421eb00317b.js"></script>
 
-I have created a new class called SecondPage in which I am placing a box on the screen. I am giving a border to this box and then giving a radius of half the value of the height and width of the container in which the box is present. Which means it will now be a circular border.
+Я создал новый класс под названием SecondPage в котором я в экране разместил Box. Я сделал границу этого Box, а так же радиус в половину значения высоты и ширины контейнера, который представляет box. Это означает что теперь будет граница по кругу.
 
-Then I am simply creating a Material page route and passing the data of the tapped list element. This is then caught by the constructor in the SecondPage class and stored.
 
-Now if you run the app, you will see the below screen.
+Затем я просто создаю страницу Material с навигацией и передаю данные элемента списка. Затем он перехватывается конструктором в классе SecondPage и хранится. 
 
-For instance let’s tap the first element.
+Теперь если вы запустите приложение, вы увидите экран как ниже.
+
+Например, давайте коснёмся первого элемента.
 
 ![](https://iswift.ru/images/Screenshot_2018-05-19-21-36-22-e1526746401874.png)
 
-Try tapping a different list item. The image of that item would be shown here.
+
+Попробуем нажать на другой элемент списка. Картинка другого элемента так же поменялась.
 
 ![](https://iswift.ru/images/Screenshot_2018-05-19-21-36-31-e1526746448563.png)
 
-Cool right? That’s it.
+Правда, круто?
 
-In this post we have seen a very simple way to structure and present the data that we receive from a http request.
+В этой статье мы могли увидеть очень простую структуру и представили данные которые мы получили по http запросу.
+Если вы сочли эту статью полезной, просьба поделиться ею с другими.
 
-If you found this helpful, kindly share it with someone and help them too.
 
-Join our Flutter Community – [here](https://discord.gg/bCSDgVG).
+Присоединяйтесь к [Флаттер сообществу](https://discord.gg/bCSDgVG).
 
-Thanks for reading. Peace.. 
+Смасибо, что читали. Всем Мир!
