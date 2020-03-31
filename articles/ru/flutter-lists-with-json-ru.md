@@ -4,34 +4,35 @@
 
 Эта статья является продолжением моей предыдущей [статьи](http://tphangout.com/flutter-making-http-requests/). Я хотел бы вас попросить пердварительно с ней ознакомиться.
 
-To learn basics of flutter get my course at a discounted price – [here](https://www.udemy.com/learn-flutter-from-scratch/?couponCode=SPECIALOFF).
+Изучить основы Flutter можно на моих курсах со скидкой [здесь](https://www.udemy.com/learn-flutter-from-scratch/?couponCode=SPECIALOFF).
 
-Other courses on flutter – [here](https://click.linksynergy.com/deeplink?id=VLPjcBMbd18&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fsearch%2F%3Fq%3Dflutter). (Affliate link – keeps my site alive by helping me pay for hosting)
+Другие курсы по Flutter – [здесь](https://click.linksynergy.com/deeplink?id=VLPjcBMbd18&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fsearch%2F%3Fq%3Dflutter). 
 
-Let’s begin.
+Давайте приступим.
 
-A screencast of this post is available here.
+Видео к этой статье будет находиться здесь.
 [![Video](https://iswift.ru/images/2020-03-31_13-16-46.png)](https://youtu.be/POexDexSpKE)
 
 
-Let’s continue from where we left off.
+Давайте продолжим с того места где остановились в прошлой статье.
 
-In our last post we saw how to make a http request and receive a json response right ?
+В нашей прошлой статье мы разобрались как делать запрос http и получили JSON ответ, правильно?
 
-Now open up main.dart file and modify it as shown below.
+
+Теперь откройте файл main.dart  и модифицируйте его как указано ниже.
 
 <script src="https://gist.github.com/iswift-ru/384f4b90218bb3260ec077da6c3a04f9.js"></script>
 
-Let’s break this down.
+Давайте разберёмся в этом ниже.
 
-First, I have removed the button in the center of the screen. Instead of the button, I need to make the http request automatically when the app loads. So, I am overriding the initState() function and making the call.
+Во первых, я удалил кнопку из центра экрана.  Вместо кнопки, я сделал автоматический http запрос, когда приложение загружается. Я переопределил функцию initState() и сделал вызов.
 
-Once I receive the data, I am simply creating a list with a set of tiles and from the response I got, I am just getting the name, phone number and avatar image alone.
+Как только я получил данные, я просто создал список с набором плиток и из полученного ответа я использовал имя, телефон, аватарку. 
 
-Now run the app and you will see the below screen.
+Now run the app and you will see the below screen. Сейчас мы запустимприложение и вы увидите как на экране ниже.
 ![](https://iswift.ru/images/Screenshot_2018-05-19-21-36-14-e1526746144606.png)
 
-Cool right?
+Круто, верно?
 
 Now let’s write some code to interact with this list. Let’s do a simple onTap interaction. When someone taps a list item, he’ll be taken to a different page where he could see the profile picture or any other details of the particular list item he tapped on.
 
