@@ -1,8 +1,8 @@
-# Flutter – Lists with JSON
+# Flutter: выводим список из полученного JSON (Rest API)
 
-Hi Friends,
+Привет друзья,
 
-This post is a continuation of my previous post [here](http://tphangout.com/flutter-making-http-requests/). I would kindly request you to read it once before proceeding.
+Эта статья является продолжением моей предыдущей [статьи](http://tphangout.com/flutter-making-http-requests/). Я хотел бы вас попросить пердварительно с ней ознакомиться.
 
 To learn basics of flutter get my course at a discounted price – [here](https://www.udemy.com/learn-flutter-from-scratch/?couponCode=SPECIALOFF).
 
