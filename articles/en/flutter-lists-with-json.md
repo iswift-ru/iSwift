@@ -11,8 +11,8 @@ Other courses on flutter – here. (Affliate link – keeps my site alive by hel
 Let’s begin.
 
 A screencast of this post is available here.
+[![Video](https://iswift.ru/images/2020-03-31_13-16-46.png)](https://youtu.be/POexDexSpKE)
 
-https://youtu.be/POexDexSpKE
 
 Let’s continue from where we left off.
 
