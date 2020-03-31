@@ -7,3 +7,4 @@
 ## 6. [Build a note-taking app with Flutter + Firebase — Part I](build-a-note-taking-app-with-flutter-firebase-part-1)
 ## 7. [Build a note-taking app with Flutter + Firebase — Part II](build-a-note-taking-app-with-flutter-firebase-part-2)
 ## 8. [Kotlin Vs Flutter: Who Will Rule the Cross-platform App Market?](kotlin-vs-flutter-who-will-rule-the-cross-platform-app-market)
+## 9. [Flutter – Lists with JSON](flutter-lists-with-json)
