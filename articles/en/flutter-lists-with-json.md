@@ -2,11 +2,11 @@
 
 Hi Friends,
 
-This post is a continuation of my previous post here. I would kindly request you to read it once before proceeding.
+This post is a continuation of my previous post [here](http://tphangout.com/flutter-making-http-requests/). I would kindly request you to read it once before proceeding.
 
-To learn basics of flutter get my course at a discounted price – here.
+To learn basics of flutter get my course at a discounted price – [here](https://www.udemy.com/learn-flutter-from-scratch/?couponCode=SPECIALOFF).
 
-Other courses on flutter – here. (Affliate link – keeps my site alive by helping me pay for hosting)
+Other courses on flutter – [here](https://click.linksynergy.com/deeplink?id=VLPjcBMbd18&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourses%2Fsearch%2F%3Fq%3Dflutter). (Affliate link – keeps my site alive by helping me pay for hosting)
 
 Let’s begin.
 
@@ -59,6 +59,6 @@ In this post we have seen a very simple way to structure and present the data th
 
 If you found this helpful, kindly share it with someone and help them too.
 
-Join our Flutter Community – here.
+Join our Flutter Community – [here](https://discord.gg/bCSDgVG).
 
 Thanks for reading. Peace.. 
