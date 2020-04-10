@@ -12,3 +12,12 @@ $ flutter create widget_communication
 
 # Open this up inside of VS Code
 $ cd widget_communication && code .```
+
+We can now open this up in the iOS or Android simulator from within VS Code.
+
+## Video Version
+If you’re interested, I’ve recorded a video where you can see me go over the steps in this article:
+
+
+
+[![Video Version](https://iswift.ru/images/2020-04-10_23-00-30.png)](https://youtu.be/fWlPwj1Pp7U)
