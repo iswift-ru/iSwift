@@ -67,4 +67,4 @@ Inside of the parent we’re able to listen to this and change the value of ```c
 
 Here’s the result of our work:
 
-[result](https://iswift.ru/images/w-com-2.png)
+![result](https://iswift.ru/images/w-com-2.png)
