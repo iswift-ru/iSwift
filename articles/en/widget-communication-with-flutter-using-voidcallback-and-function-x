@@ -1,1 +1,2 @@
-
+# Widget Communication with Flutter using VoidCallback and Function(x)
+> In this article we’re going to investigate how we can use callback-style events to communicate between widgets with Flutter.
