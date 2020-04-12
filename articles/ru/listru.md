@@ -8,6 +8,6 @@
 # 7. [Делаем блокнот с заметками на Flutter и Firebase часть 2](build-a-note-taking-app-with-flutter-firebase-part-2-ru)
 # 8. [Kotlin или Flutter: Кто будет управлять межплатформенным рынком приложений?](kotlin-vs-flutter-who-will-rule-the-cross-platform-app-market-ru)
 # 9. [Flutter: выводим список из полученного JSON (Rest API)](flutter-lists-with-json-ru)
-# 10. [Как передать значение переменной во  Flutter используя VoidCallback и Function(x)](widget-communication-with-flutter-using-voidcallback-and-function-x)
+# 10. [Как передать значение переменной во  Flutter используя VoidCallback и Function(x)](widget-communication-with-flutter-using-voidcallback-and-function-x-ru)
 
 
