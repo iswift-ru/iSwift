@@ -7,11 +7,11 @@ Why is this important? It allows us to separate our widgets into small, testable
 
 As always, we’ll start off by setting up a new project:
 
-```# New Flutter project
+**New Flutter project**
 $ flutter create widget_communication
 
-# Open this up inside of VS Code
-$ cd widget_communication && code .```
+**Open this up inside of VS Code**
+$ cd widget_communication && code .
 
 We can now open this up in the iOS or Android simulator from within VS Code.
 
