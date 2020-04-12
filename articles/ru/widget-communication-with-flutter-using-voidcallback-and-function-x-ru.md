@@ -9,9 +9,11 @@
 Как всегда мы начинаем с создания нового проекта:
 
 **New Flutter project**
+
 $ flutter create widget_communication
 
 **Open this up inside of VS Code**
+
 $ cd widget_communication && code
 
 Теперь мы можем открыть это в симуляторе iOS или Android из VS Code.
@@ -24,7 +26,7 @@ $ cd widget_communication && code
 [![Video Version](https://iswift.ru/images/2020-04-10_23-00-30.png)](https://youtu.be/fWlPwj1Pp7U)
 
 
-## Count This!
+## Count!
 Первый метод, мы будем использовать простую передачу данных вниз ребёнку как свойство. Давайте обновим ```main.dart``` и укажем ссылку на **CounterPage**, который мы скоро создадим.
 
 
@@ -43,7 +45,7 @@ $ cd widget_communication && code
 ![](https://iswift.ru/images/w-com-prop.png)
 
 ## VoidCallback
-For example’s sake, let’s turn our count into a ```Button``` and say that any time we click the button we want to notify the parent ```CounterPage```.
+
 Для примера, давайте поместим count в кнопку ```Button``` и скажем ей что каждый раз когда нажимается кнопка мы хотели бы уведомить родителя ```CounterPage```
 
 
@@ -72,7 +74,7 @@ For example’s sake, let’s turn our count into a ```Button``` and say that an
 
 <script src="https://gist.github.com/iswift-ru/e6db35f5dfbee429be185757487e4857.js"></script>
 
-Here’s the result of our work:
+
 А вот и результат нашей работы
 
 ![result](https://iswift.ru/images/w-com-2.png)
